@@ -1786,7 +1786,9 @@ static NSDictionary *SPAirFusedRenderExport(const SPAirFusedRenderPtr &record) {
         [self resetAirDisplayPolicyLocked];
     }
 }
-- (int64_t)selectionGuardNs { return _selectionGuardNs.load(); }
+- (int64_t)selectionGuardNs {
+    return sp::presentationSelectionGuardNs(_lowLatencyPresentationEnabled.load(), _selectionGuardNs.load());
+}
 
 - (void)setPresentedVideoReadbackEnabled:(BOOL)enabled {
 #if ODF_AIR_FUSED_RIFE_PRESENT_DIAGNOSTIC

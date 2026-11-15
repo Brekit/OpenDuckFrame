@@ -24,7 +24,7 @@ Periodic preview status must preserve existing errors and warnings. Pending sett
 File output retains its fullscreen control; display and window output follow their source without a fullscreen preview option.
 The workbench is a compact controls-only window. Keep its preview endpoint disconnected; file video stays in the player and live enhancement uses its actual output view.
 Apple low latency in live window/display mode offers Content timing: General window / Automatic video. Old profiles retain General window. Automatic video requests a 60 FPS capture ceiling without replacing the saved general-mode cap, reports estimated 24/25/30 FPS or detection in progress, and leaves audio in the source app. Keep this choice hidden for files and other engines; preserve it when saving configurations.
-Live Apple low latency also offers an interpolation detail budget: Automatic retains the existing API-limited sizing; 720p caps intermediate processing at 1280×720 while preserving original/output dimensions. Preserve this choice in profiles and hide it for files and other engines. Reduced intermediate detail is a quality/performance choice, not a promise of stable FPS.
+Live Apple low latency also offers an interpolation detail budget: Automatic retains the existing API-limited sizing; 720p limits intermediate processing to a 720p pixel budget and 1280-pixel edge, preserving aspect ratio and original/output dimensions. Preserve this choice in profiles and hide it for files and other engines. Reduced intermediate detail is a quality/performance choice, not a promise of stable FPS.
 
 ## UI validation
 
