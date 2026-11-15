@@ -387,8 +387,10 @@ private final class SourceSizeControls {
   precondition(WorkbenchTitle.text("画质工作台",version:nil) == "画质工作台")
   var oldProfile = try JSONSerialization.jsonObject(with: JSONEncoder().encode(EnhancementProfile())) as! [String: Any]
   oldProfile.removeValue(forKey:"automaticVideoCadence")
+  oldProfile.removeValue(forKey:"lowLatencyProcessingPreset")
   let legacyTiming = EnhancementProfileStore.decode(try JSONSerialization.data(withJSONObject:oldProfile),fallbackName:"legacy")!
   precondition(!legacyTiming.automaticVideoCadence, "Existing profiles must retain general window timing")
+  precondition(legacyTiming.lowLatencyProcessingPreset == 0, "Existing profiles must retain automatic processing size")
   for source in ["window", "display", "file"] {
    for engine in ["apple.lowlatency", "apple.frc", "rife.metal"] {
     var timing = EnhancementProfile()
@@ -400,6 +402,13 @@ private final class SourceSizeControls {
     let changes=WorkbenchActionControls(); changes.profile=timing
     var baseline=timing; baseline.automaticVideoCadence=false
     precondition(changes.hasChanges(relativeTo:baseline) == active)
+    var smaller=timing; smaller.lowLatencyProcessingPreset=720
+    let detail=EnhancementProfileStore.decode(try JSONEncoder().encode(smaller),fallbackName:"detail")!
+    precondition(detail.lowLatencyProcessingPreset == 720, "Processing budget must survive saving")
+    changes.profile=smaller
+    precondition(changes.hasChanges(relativeTo:timing) == active, "Only live Apple interpolation applies this budget")
+    var resetDetail=smaller; applyDefaultPreset(&resetDetail)
+    precondition(resetDetail.lowLatencyProcessingPreset == 0)
    }
   }
   oldProfile.removeValue(forKey:"windowOutputMode")

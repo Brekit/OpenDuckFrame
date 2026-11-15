@@ -31,7 +31,7 @@ static CVPixelBufferRef image(int width,int height,int frame,bool timingPattern)
 }
 
 int main(int argc,char **argv) { @autoreleasepool {
-    if(argc!=4 || !dlopen(argv[1],RTLD_NOW|RTLD_LOCAL)){fprintf(stderr,"dlopen: %s\n",dlerror());return 2;}
+    if((argc!=4 && argc!=5) || !dlopen(argv[1],RTLD_NOW|RTLD_LOCAL)){fprintf(stderr,"dlopen: %s\n",dlerror());return 2;}
     NSString *dest=@(argv[2]);
     const int sourceW=2560, sourceH=1410;
     NSString *profile=@(argv[3]);
@@ -67,6 +67,7 @@ int main(int argc,char **argv) { @autoreleasepool {
     request.interpolationEnabled=YES;request.engineID=@"apple.lowlatency";request.modelID=@"vt.llfi.temporal.1";
     request.rateKind=SPLiveRateMultiplier;request.multiplier=2;request.captureSourceKind=SPLiveCaptureSourceKindWindow;
     request.automaticVideoCadence=automatic;
+    request.lowLatencyProcessingPreset=argc==5 ? atoi(argv[4]) : 0;
     request.displayRefreshHz=requestedDisplayHz>0?requestedDisplayHz:window.screen.maximumFramesPerSecond;request.scaleEnabled=NO;request.requestID=1;
     [p updateRequest:request];
     __block int frame=0,tick=0,lastVideo=-1;__block NSDictionary *baseline=nil; NSMutableArray *samples=[NSMutableArray array];
@@ -96,7 +97,7 @@ int main(int argc,char **argv) { @autoreleasepool {
         NSMutableDictionary *v=[NSMutableDictionary dictionary];
         NSDictionary *display=[view displaySlotDiagnostics];
         v[@"actualSelectionLeadNs"]=@([view selectionGuardNs]);v[@"actualRuleB"]=display[@"ruleB"] ?: @{};
-        for(NSString *k in @[@"overlayInputEstimateFPS",@"overlayPresentedFPS",@"estimatedRequestedFPS",@"syntheticOK",@"syntheticFail",@"presentedSource",@"presentedSynthetic",@"presentationFailuresEpoch",@"sourceGeneration",@"configVersion",@"frcEwmaMs",@"delayMs",@"captureToOutputReadyP95ms",@"renderDrops",@"nativeBudgetActive",@"snapshotStale",@"automaticVideoCadence",@"detectedVideoFPS",@"videoRetimedFrames",@"videoCoalescedInputs",@"videoPendingInput"])
+        for(NSString *k in @[@"overlayInputEstimateFPS",@"overlayPresentedFPS",@"estimatedRequestedFPS",@"syntheticOK",@"syntheticFail",@"presentedSource",@"presentedSynthetic",@"presentationFailuresEpoch",@"sourceGeneration",@"configVersion",@"frcEwmaMs",@"delayMs",@"captureToOutputReadyP95ms",@"renderDrops",@"nativeBudgetActive",@"snapshotStale",@"automaticVideoCadence",@"detectedVideoFPS",@"videoRetimedFrames",@"videoCoalescedInputs",@"videoPendingInput",@"processingWidth",@"processingHeight",@"lowLatencyProcessingPreset"])
             if(s[k])v[k]=s[k];
         v[@"elapsed"]=@(CACurrentMediaTime()-began);v[@"visible"]=@(view.windowVisibleSnapshot);
         v[@"drawableVisible"]=@(view.drawableVisibleSnapshot);v[@"exposed"]=@(view.exposedSnapshot);
@@ -127,7 +128,7 @@ int main(int argc,char **argv) { @autoreleasepool {
             [last[@"actualRuleB"][@"decisionCountInContext"] unsignedLongLongValue]>0;
         NSDictionary *result=@{@"ok":@(ok),@"ptsReversals":@(reversals),@"allMeasuredDrawableVisible":@(visible),
             @"displayLinkRequestedHz":@(request.displayRefreshHz),@"physicalMaximumHz":@(window.screen.maximumFramesPerSecond),
-            @"sourceSize":@[@(sourceW),@(sourceH)],@"sourceFPS":@(videoFixture?videoFPS:(jitter?24:30)),@"profile":profile,@"warmupSeconds":@(warmup),@"windowAnimationHz":@(jitter?5:0),
+            @"sourceSize":@[@(sourceW),@(sourceH)],@"processingPreset":@(request.lowLatencyProcessingPreset),@"sourceFPS":@(videoFixture?videoFPS:(jitter?24:30)),@"profile":profile,@"warmupSeconds":@(warmup),@"windowAnimationHz":@(jitter?5:0),
             @"sourceFrames":@(frame),@"baseline":baseline?:@{},@"samples":samples,@"presentations":recorded,
             @"scope":@"Production Apple low-latency processor and display-link presenter in an owned visible test window, 3-second warmup (6 for the 25 FPS fixture) then 20-second observation. Steady 30 FPS, or 24/25 FPS content plus 5 Hz window animation. The 25 FPS fixture adds a low-contrast moving texture in all six sampling regions. No ScreenCaptureKit, foreground-selection policy, audiovisual or subjective quality acceptance. Display-link callback request does not change physical screen refresh."};
         [p stop];
