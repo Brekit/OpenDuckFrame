@@ -3847,6 +3847,7 @@ final class EnhancementWorkbenchController: NSWindowController, NSWindowDelegate
             "p0ControlsEnabled": p0ControlsEnabled,
             "p0RequestedCaptureCap": capture.captureCapFPS,
             "realWindowCapture": capture.running,
+            "screenCaptureAccess": ScreenCapturePermission.shared.hasAccess,
             "capturePaused": capture.paused,
             "sourceKind": activeSourceKind.isEmpty ? profile.sourceKind : activeSourceKind,
             "sourceTitle": activeSourceTitle,
