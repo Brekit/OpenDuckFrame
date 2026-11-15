@@ -3145,7 +3145,9 @@ final class EnhancementWorkbenchController: NSWindowController, NSWindowDelegate
         stopButton?.isHidden = !enhancing && !filePreparing && !liveCaptureRunning
         stopButton?.title = filePreparing && !enhancing
             ? EnhancementText.t("Cancel", "取消")
-            : EnhancementText.t("Stop Enhancement", "关闭增强")
+            : (liveCaptureRunning && !enhancing
+                ? EnhancementText.t("Stop Capture", "停止采集")
+                : EnhancementText.t("Stop Enhancement", "关闭增强"))
     }
 
     /// Form controls share one trailing column; switches keep their native size.

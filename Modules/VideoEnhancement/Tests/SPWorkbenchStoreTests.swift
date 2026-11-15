@@ -282,11 +282,15 @@ private final class SourceSizeControls {
    preview.refreshActions()
    precondition(!preview.isEnhancing && preview.stopButton?.isHidden == false,
      "A source-only capture must remain stoppable before an engine commits or after preparation fails")
+   precondition(preview.stopButton?.title == "Stop Capture",
+     "Source-only capture must not be labeled as active enhancement")
    precondition(preview.startButton?.isHidden == false && preview.startButton?.isEnabled == true,
      "Showing Stop for source preview must preserve the enhancement start action")
    preview.pendingApply = preview.profile
    preview.refreshActions()
    precondition(preview.startButton?.title == "Cancel" && preview.stopButton?.isHidden == false)
+   precondition(preview.stopButton?.title == "Stop Capture",
+     "Pending engine preparation must not relabel source-only capture as enhancement")
    preview.capture.running = false
    preview.pendingApply = nil
    preview.refreshActions()
