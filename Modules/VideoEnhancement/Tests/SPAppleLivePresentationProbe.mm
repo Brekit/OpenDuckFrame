@@ -41,9 +41,13 @@ int main(int argc,char **argv) { @autoreleasepool {
     const BOOL jitter=videoFixture || [profile isEqualToString:@"jitter"];
     const double warmup=videoFixture?6:3;
     [NSApplication sharedApplication];[NSApp setActivationPolicy:NSApplicationActivationPolicyAccessory];
+    // Source dimensions are pixels, while AppKit window geometry uses points.
+    // Match a Retina drawable to the source instead of testing a 2x larger canvas.
+    CGFloat backingScale=MAX(1,NSScreen.mainScreen.backingScaleFactor);
+    NSRect canvas=NSMakeRect(0,0,sourceW/backingScale,sourceH/backingScale);
     Class viewClass=NSClassFromString(@"SPLivePreviewView");
-    SPLivePreviewView *view=[[viewClass alloc] initWithFrame:NSMakeRect(0,0,sourceW,sourceH)];
-    NSWindow *window=[[NSWindow alloc] initWithContentRect:NSMakeRect(0,0,sourceW,sourceH)
+    SPLivePreviewView *view=[[viewClass alloc] initWithFrame:canvas];
+    NSWindow *window=[[NSWindow alloc] initWithContentRect:canvas
         styleMask:NSWindowStyleMaskBorderless backing:NSBackingStoreBuffered defer:NO];
     window.title=@"OpenDuckFrame — timed presentation component test";
     window.collectionBehavior=NSWindowCollectionBehaviorCanJoinAllSpaces | NSWindowCollectionBehaviorFullScreenAuxiliary;
@@ -128,6 +132,7 @@ int main(int argc,char **argv) { @autoreleasepool {
             [last[@"actualRuleB"][@"decisionCountInContext"] unsignedLongLongValue]>0;
         NSDictionary *result=@{@"ok":@(ok),@"ptsReversals":@(reversals),@"allMeasuredDrawableVisible":@(visible),
             @"displayLinkRequestedHz":@(request.displayRefreshHz),@"physicalMaximumHz":@(window.screen.maximumFramesPerSecond),
+            @"backingScale":@(backingScale),@"windowPoints":@[@(canvas.size.width),@(canvas.size.height)],
             @"sourceSize":@[@(sourceW),@(sourceH)],@"processingPreset":@(request.lowLatencyProcessingPreset),@"sourceFPS":@(videoFixture?videoFPS:(jitter?24:30)),@"profile":profile,@"warmupSeconds":@(warmup),@"windowAnimationHz":@(jitter?5:0),
             @"sourceFrames":@(frame),@"baseline":baseline?:@{},@"samples":samples,@"presentations":recorded,
             @"scope":@"Production Apple low-latency processor and display-link presenter in an owned visible test window, 3-second warmup (6 for the 25 FPS fixture) then 20-second observation. Steady 30 FPS, or 24/25 FPS content plus 5 Hz window animation. The 25 FPS fixture adds a low-contrast moving texture in all six sampling regions. No ScreenCaptureKit, foreground-selection policy, audiovisual or subjective quality acceptance. Display-link callback request does not change physical screen refresh."};

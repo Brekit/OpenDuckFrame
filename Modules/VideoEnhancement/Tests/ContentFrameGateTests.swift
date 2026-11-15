@@ -31,19 +31,25 @@ import CoreVideo
     }
     static func benchmark() {
         for format in [kCVPixelFormatType_32BGRA, kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange] {
+          for mode in ["sample-change", "exact-repeat", "unsampled-change"] {
             let gate = ContentFrameGate(), image = buffer(2560, 1440, format, 32)
-            let point = ContentFrameGate.sampleCoordinates(width: 2560, height: 1440)[0]
+            let points = ContentFrameGate.sampleCoordinates(width: 2560, height: 1440)
+            let point = mode == "sample-change" ? points[0] : (x: 0, y: 0)
+            precondition(mode != "unsampled-change" || !points.contains { $0.x == 0 && $0.y == 0 })
             for i in 0..<600 {
                 CVPixelBufferLockBaseAddress(image, [])
                 let planar = CVPixelBufferIsPlanar(image)
                 let base = (planar ? CVPixelBufferGetBaseAddressOfPlane(image, 0) : CVPixelBufferGetBaseAddress(image))!.assumingMemoryBound(to: UInt8.self)
                 let stride = planar ? CVPixelBufferGetBytesPerRowOfPlane(image, 0) : CVPixelBufferGetBytesPerRow(image)
-                base[point.y * stride + point.x * (planar ? 1 : 4)] = UInt8((i % 2) * 8 + 32)
+                if mode != "exact-repeat" {
+                    base[point.y * stride + point.x * (planar ? 1 : 4)] = UInt8((i % 2) * (mode == "sample-change" ? 8 : 1) + 32)
+                }
                 CVPixelBufferUnlockBaseAddress(image, [])
                 _ = gate.evaluate(buffer: image, generation: 1, hostNs: Int64(i) * 8_333_333 + 1)
             }
             let d = gate.diagnostics(nowNs: 5_000_000_000)
-            print("A7 2560x1440 format=\(format == kCVPixelFormatType_32BGRA ? "BGRA" : "420v") samples=600 measuredLast=256 p95_ms=\(d["contentFingerprintP95Ms"]!) includes=lock,sampling,full_pixel_comparison,snapshot_copy,unlock,gate_diagnostics_bookkeeping actualSCK=false")
+            print("A7 2560x1440 format=\(format == kCVPixelFormatType_32BGRA ? "BGRA" : "420v") mode=\(mode) samples=600 measuredLast=256 p95_ms=\(d["contentFingerprintP95Ms"]!) includes=lock,sampling,conditional_full_pixel_comparison,snapshot_update,unlock,gate_diagnostics_bookkeeping actualSCK=false")
+          }
         }
     }
     static func main() {
