@@ -232,6 +232,7 @@ private final class CaptureCardStackView: NSStackView {
         renderTelemetry()
     }
     private func renderTelemetry() {
+        preview.refreshVisibilitySnapshot()
         guard running, let r = lastReceipt else { return }
         let now = ProcessInfo.processInfo.systemUptime
         let fresh = now - lastReceiptTime < 2 && !r.failed
@@ -280,7 +281,10 @@ private final class CaptureCardStackView: NSStackView {
         NSPasteboard.general.clearContents(); NSPasteboard.general.setString(text, forType: .string)
     }
     func windowWillClose(_ notification: Notification) { stop(); if notification.object as? NSWindow === window { outputWindow?.orderOut(nil) } }
+    func windowDidChangeOcclusionState(_ notification: Notification) { preview.refreshVisibilitySnapshot() }
+    func windowDidResize(_ notification: Notification) { preview.refreshVisibilitySnapshot() }
     func windowDidChangeScreen(_ notification: Notification) {
+        preview.refreshVisibilitySnapshot()
         if notification.object as? NSWindow === outputWindow, let screen = outputWindow?.screen { processor.updateDisplayRefreshHz(refreshHz(screen)) }
     }
 }

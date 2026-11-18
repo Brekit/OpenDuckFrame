@@ -11,7 +11,10 @@ microphone permission. It never selects the Mac microphone as a fallback.
 - **USB link:** the reported negotiated link speed, read without opening the device exclusively. Missing or ambiguous registry data stays unknown.
 - **Requested USB mode:** one of the formats and frame durations advertised by
   AVFoundation for this specific device. Mode availability is not proof of stable
-  delivery at that rate. Stop/restart applies changes transactionally.
+  delivery at that rate. Stop/restart applies changes transactionally. The source
+  reasserts the hardware format after session configuration, requests matching
+  output buffer dimensions, and checks the active hardware dimensions after start
+  so macOS does not silently use its default 1080p output for a selected 4K mode.
 - **Received USB video:** actual CVPixelBuffer dimensions/pixel format and counted
   callback rate. A mismatch is displayed rather than hidden.
 - **Input to processing:** frames admitted to the selected processing profile.

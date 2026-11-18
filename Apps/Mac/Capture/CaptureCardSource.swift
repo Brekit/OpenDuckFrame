@@ -103,7 +103,10 @@ final class CaptureCardSource: NSObject, AVCaptureVideoDataOutputSampleBufferDel
                 // and restored inference sizing stay in the existing processor.
                 let preferred = kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange
                 let type = output.availableVideoPixelFormatTypes.contains(preferred) ? preferred : kCVPixelFormatType_32BGRA
-                output.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String: type]
+                output.videoSettings = [kCVPixelBufferPixelFormatTypeKey as String: type,
+                                        kCVPixelBufferWidthKey as String: mode.width,
+                                        kCVPixelBufferHeightKey as String: mode.height,
+                                        kCVPixelBufferIOSurfacePropertiesKey as String: [:]]
                 output.setSampleBufferDelegate(self, queue: queue)
                 var audioNote = ""
                 if audio {
@@ -118,6 +121,14 @@ final class CaptureCardSource: NSObject, AVCaptureVideoDataOutputSampleBufferDel
                     } else { audioNote = " HDMI audio device not found; microphone is not used." }
                 }
                 session.commitConfiguration()
+                // On macOS the default session preset can rewrite activeFormat at
+                // commit. Reassert the selected hardware format after the graph
+                // is committed, and refuse silent scaling from a different mode.
+                try device.lockForConfiguration()
+                device.activeFormat = mode.format
+                device.activeVideoMinFrameDuration = mode.duration
+                device.activeVideoMaxFrameDuration = mode.duration
+                device.unlockForConfiguration()
                 self.session = session; self.videoOutput = output; previousPTS = nil
                 gate = CaptureCardRateGate(); previousSample = nil
                 selectedSourceFPS = CaptureCardPolicy.sourceFPS(captureFPS: mode.fps, thirtyFPS: thirtyFPS)
@@ -130,6 +141,11 @@ final class CaptureCardSource: NSObject, AVCaptureVideoDataOutputSampleBufferDel
                     })
                 }
                 session.startRunning()
+                let activeSize = CMVideoFormatDescriptionGetDimensions(device.activeFormat.formatDescription)
+                guard activeSize.width == mode.width && activeSize.height == mode.height else {
+                    fail("The capture driver did not accept the requested hardware format. Choose another USB mode.")
+                    stopOnQueue(); return
+                }
                 lastReceipt.running = session.isRunning
                 lastReceipt.message = "\(mode.label).\(audioNote)"
                 receipt(lastReceipt)
