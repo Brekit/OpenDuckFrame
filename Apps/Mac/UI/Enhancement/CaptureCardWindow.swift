@@ -278,7 +278,11 @@ private final class CaptureCardStackView: NSStackView {
     }
     @objc private func copyReport() {
         let text = "OpenDuckFrame capture card\n" + (devicePicker.titleOfSelectedItem ?? "") + "\nRequested USB: " + (modePicker.titleOfSelectedItem ?? "") + "\n" + (profilePicker.titleOfSelectedItem ?? "") + "\n" + (screenPicker.titleOfSelectedItem ?? "") + "\n" + status.stringValue + "\n" + telemetry.stringValue + "\n" + L("capture.explanation")
-        NSPasteboard.general.clearContents(); NSPasteboard.general.setString(text, forType: .string)
+        let keys = ["overlayPresentedFPS", "syntheticOK", "frcP95ms", "frcEwmaMs", "captureToModelReadyP95ms", "captureToOutputReadyP95ms", "delayMs", "lateReadyDrops", "deadlineDrops", "pendingExpiredDrops", "queueDrops", "renderDrops", "epochPhysicalSource", "epochPhysicalSynthetic", "firstPresentationFailureLifetime"]
+        let metrics = lastStats.filter { keys.contains($0.key) }
+        let data = try? JSONSerialization.data(withJSONObject: metrics, options: [.sortedKeys])
+        let details = data.flatMap { String(data: $0, encoding: .utf8) } ?? "{}"
+        NSPasteboard.general.clearContents(); NSPasteboard.general.setString(text + "\n" + details, forType: .string)
     }
     func windowWillClose(_ notification: Notification) { stop(); if notification.object as? NSWindow === window { outputWindow?.orderOut(nil) } }
     func windowDidChangeOcclusionState(_ notification: Notification) { preview.refreshVisibilitySnapshot() }

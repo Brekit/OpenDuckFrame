@@ -15,6 +15,7 @@ microphone permission. It never selects the Mac microphone as a fallback.
   reasserts the hardware format after session configuration, requests matching
   output buffer dimensions, and checks the active hardware dimensions after start
   so macOS does not silently use its default 1080p output for a selected 4K mode.
+  Frame duration is configured on both the device and its macOS output connection.
 - **Received USB video:** actual CVPixelBuffer dimensions/pixel format and counted
   callback rate. A mismatch is displayed rather than hidden.
 - **Input to processing:** frames admitted to the selected processing profile.
@@ -74,3 +75,6 @@ source lead, bounded queues, generation checks and display timing remain.
 This is not zero latency and does not guarantee 4K60 interpolation.
 
 The fork disables upstream Sparkle updates to avoid replacing these changes.
+
+**Copy diagnostics** includes bounded processing and presentation counters with
+the visible settings. It does not include captured pictures or audio.

@@ -140,6 +140,13 @@ final class CaptureCardSource: NSObject, AVCaptureVideoDataOutputSampleBufferDel
                         self?.queue.async { [weak self] in self?.fail(message); self?.stopOnQueue() }
                     })
                 }
+                // macOS connections have their own frame-duration controls,
+                // independent of the device. Otherwise some UVC modes deliver
+                // their maximum advertised rate despite the selected device rate.
+                if let connection = output.connection(with: .video) {
+                    if connection.isVideoMinFrameDurationSupported { connection.videoMinFrameDuration = mode.duration }
+                    if connection.isVideoMaxFrameDurationSupported { connection.videoMaxFrameDuration = mode.duration }
+                }
                 session.startRunning()
                 let activeSize = CMVideoFormatDescriptionGetDimensions(device.activeFormat.formatDescription)
                 guard activeSize.width == mode.width && activeSize.height == mode.height else {
