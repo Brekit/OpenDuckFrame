@@ -22,6 +22,7 @@ typedef NS_ENUM(NSInteger, SPLiveCaptureSourceKind) {
     SPLiveCaptureSourceKindWindow = 1,
     SPLiveCaptureSourceKindDisplay = 2,
     SPLiveCaptureSourceKindFile = 3,
+    SPLiveCaptureSourceKindCaptureCard = 4,
 };
 
 typedef NS_ENUM(NSInteger, SPLiveScaleEngine) {

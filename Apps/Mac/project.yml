@@ -30,11 +30,11 @@ settings:
     SWIFT_ACTIVE_COMPILATION_CONDITIONS: "$(inherited) SP_ENHANCE"
     MACOSX_DEPLOYMENT_TARGET: "14.0"
     ARCHS: arm64
-    MARKETING_VERSION: "0.6.3"
-    CURRENT_PROJECT_VERSION: "50"
+    MARKETING_VERSION: "0.7.0"
+    CURRENT_PROJECT_VERSION: "51"
     ODF_BUNDLE_ID: app.openduckframe.OpenDuckFrame
     ODF_DISPLAY_NAME: OpenDuckFrame
-    ODF_CANDIDATE_LABEL: "r6"
+    ODF_CANDIDATE_LABEL: "capture-card-1"
     ODF_SINGLE_INSTANCE_LOCK_VERSION: "1"
     ODF_DEVELOPMENT_TEAM: ""
     ENABLE_USER_SCRIPT_SANDBOXING: NO
@@ -210,6 +210,8 @@ targets:
         ODFRepositoryURL: "https://github.com/Jun-bao/OpenDuckFrame"
         ODFFeedbackURL: "https://openduckframe.cn/feedback/"
         NSSpeechRecognitionUsageDescription: "OpenDuckFrame generates subtitles from the audio of the media you open. Processing takes place on this Mac."
+        NSCameraUsageDescription: "OpenDuckFrame reads video from the USB capture card you select. Video stays on this Mac."
+        NSMicrophoneUsageDescription: "OpenDuckFrame plays HDMI audio from your capture card when you enable audio monitoring."
         NSScreenCaptureUsageDescription: "OpenDuckFrame shows and enhances the window or display you select. Capture stays on this Mac."
         # Folder and volume privacy prompts appear only when OpenDuckFrame scans the
         # folder of a video you opened. Translations: Resources/InfoPlist.xcstrings.
@@ -345,6 +347,8 @@ targets:
       path: OpenDuckFrame.entitlements
       properties:
         com.apple.security.app-sandbox: true
+        com.apple.security.device.camera: true
+        com.apple.security.device.audio-input: true
         # Files and folders the user opens or grants in an open panel.
         com.apple.security.files.user-selected.read-write: true
         # Recent items and granted folders survive relaunches as bookmarks.

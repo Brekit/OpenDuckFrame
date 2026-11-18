@@ -94,6 +94,9 @@ enum MainMenuBuilder {
                                        keyEquivalent: "e")
         workbenchItem.keyEquivalentModifierMask = [.command, .shift]
         fileMenu.addItem(workbenchItem)
+        let captureItem = NSMenuItem(title: L("capture.title"), action: #selector(AppDelegate.openCaptureCardAction(_:)), keyEquivalent: "c")
+        captureItem.keyEquivalentModifierMask = [.command, .shift]
+        fileMenu.addItem(captureItem)
 
         let recentItem = NSMenuItem(title: L("menu.recentPlays"), action: nil, keyEquivalent: "")
         let recentMenu = NSMenu(title: L("menu.recentPlays"))

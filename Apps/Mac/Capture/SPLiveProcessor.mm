@@ -4008,6 +4008,7 @@ static NSDictionary *SPAirDelayAlignmentExport(const std::vector<SPAirDelayAlign
 
 - (BOOL)nativeBudgetForSnapshot:(const sp::NativeCadenceSnapshot &)snapshot {
     return !_stopped && _request.interpolationEnabled && _request.rateKind == SPLiveRateMultiplier &&
+        _request.captureSourceKind != SPLiveCaptureSourceKindCaptureCard &&
         ![self automaticVideoCadenceActive] &&
         snapshot.active && snapshot.generation == _sourceGeneration &&
         snapshot.width == _sourceWidth && snapshot.height == _sourceHeight &&
@@ -7395,7 +7396,8 @@ static NSDictionary *SPAirDelayAlignmentExport(const std::vector<SPAirDelayAlign
     // Window capture carries uneven video/UI timestamps. Reserve time for the
     // following source, conversion and a display slot before releasing X2/X4
     // output; the existing time/byte caps below still bound retained work.
-    if (_lowLatency && !_nativeBudgetActive && _request.viewMode == SPLiveViewEnhanced)
+    if (_lowLatency && !_nativeBudgetActive && _request.viewMode == SPLiveViewEnhanced &&
+        _request.captureSourceKind != SPLiveCaptureSourceKindCaptureCard)
         wanted = MAX(wanted, [self automaticVideoCadenceActive] ? 0.140 : 0.080);
     if (_lowLatency && [self requestUsesLowPrescale:_request width:_width height:_height] && _captureToOutputReadyNs.size() >= 8) {
         // Include actual capture-to-ready time, which also covers pre-scaling,

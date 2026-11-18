@@ -1,3 +1,5 @@
+> **主机采集分支：**支持直接 USB 采集、格式选择、30→60/60→120 配置及实测诊断。打开 **文件 → Capture card**。详见[采集卡指南](docs/capture-card.md)。已禁用上游自动更新。
+
 <p align="center"><img src="Design/AppIcon/AppIcon.appiconset/AppIcon-256.png" alt="OpenDuckFrame" width="128" height="128"></p>
 <h1 align="center">OpenDuckFrame · 开源小鸭</h1>
 <p align="center"><b>让 Mac 上的画面更流畅、更清晰。</b></p>

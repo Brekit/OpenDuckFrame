@@ -8,6 +8,11 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuItemValidation {
 
     private let menuRouter = MenuRouter()
 
+    @MainActor @objc func openCaptureCardAction(_ sender: Any?) {
+        CaptureCardWindow.shared.show()
+    }
+
+
     private var pendingOpenURLs: [URL] = []
     private var cliOpenIssued = false
     private var didFinishLaunchingCompleted = false
@@ -455,9 +460,9 @@ final class AppDelegate: NSObject, NSApplicationDelegate, NSMenuItemValidation {
         }
 
         NSApp.activate(ignoringOtherApps: true)
-        if showWorkbench {
+        if CommandLine.arguments.contains("--odf-capture-card") || showWorkbench {
             wc.window?.orderOut(nil)
-            EnhancementWorkbenchController.shared.showWorkbench()
+            CaptureCardWindow.shared.show()
         }
 
         // Direct-distribution updates only. An unconfigured build does not load

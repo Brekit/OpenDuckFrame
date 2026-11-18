@@ -40704,6 +40704,3894 @@
           }
         }
       }
+    },
+    "capture.title": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Capture card"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Карта захвата"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Capture-Karte"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Capturadora"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Carte de capture"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kartu tangkap"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scheda di acquisizione"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キャプチャーカード"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "캡처 카드"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Capturekaart"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Karta przechwytująca"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Placa de captura"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "采集卡"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "擷取卡"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thẻ thu hình"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yakalama kartı"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "การ์ดจับภาพ"
+          }
+        }
+      }
+    },
+    "capture.subtitle": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PlayStation → USB capture → Apple frame generation → display"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PlayStation → USB-захват → генерация кадров Apple → монитор"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PlayStation → USB-Aufnahme → Apple-Zwischenbilder → Bildschirm"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PlayStation → captura USB → generación de fotogramas Apple → pantalla"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PlayStation → capture USB → génération d’images Apple → écran"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PlayStation → tangkapan USB → pembuatan bingkai Apple → layar"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PlayStation → acquisizione USB → generazione fotogrammi Apple → schermo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PlayStation → USBキャプチャ → Appleフレーム生成 → 画面"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PlayStation → USB 캡처 → Apple 프레임 생성 → 화면"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PlayStation → USB-opname → Apple-framegeneratie → scherm"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PlayStation → przechwytywanie USB → generowanie klatek Apple → ekran"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PlayStation → captura USB → geração de quadros Apple → tela"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PlayStation → USB 采集 → Apple 帧生成 → 显示器"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PlayStation → USB 擷取 → Apple 影格生成 → 顯示器"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PlayStation → thu USB → tạo khung hình Apple → màn hình"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PlayStation → USB yakalama → Apple kare üretimi → ekran"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "PlayStation → จับภาพ USB → สร้างเฟรม Apple → จอภาพ"
+          }
+        }
+      }
+    },
+    "capture.audio": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Play HDMI audio on this Mac"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Воспроизводить HDMI-звук на Mac"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HDMI-Ton auf diesem Mac wiedergeben"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reproducir audio HDMI en este Mac"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Lire le son HDMI sur ce Mac"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Putar audio HDMI di Mac ini"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Riproduci audio HDMI sul Mac"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "このMacでHDMI音声を再生"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "이 Mac에서 HDMI 오디오 재생"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HDMI-audio afspelen op deze Mac"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odtwarzaj dźwięk HDMI na Macu"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Reproduzir áudio HDMI neste Mac"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在此 Mac 播放 HDMI 音频"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "在此 Mac 播放 HDMI 音訊"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Phát âm thanh HDMI trên Mac này"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bu Mac’te HDMI sesini çal"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เล่นเสียง HDMI บน Mac นี้"
+          }
+        }
+      }
+    },
+    "capture.start": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Start"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Запустить"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Starten"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Démarrer"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mulai"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avvia"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開始"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "시작"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Starten"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uruchom"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciar"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "开始"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "開始"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bắt đầu"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Başlat"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เริ่ม"
+          }
+        }
+      }
+    },
+    "capture.stop": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stop"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Остановить"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stoppen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Detener"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arrêter"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Hentikan"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ferma"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "停止"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "중지"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stoppen"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zatrzymaj"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parar"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "停止"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "停止"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dừng"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Durdur"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "หยุด"
+          }
+        }
+      }
+    },
+    "capture.ready": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choose a mode, then press Start. Recommended selects a mode for your display."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выбери режим и нажми «Запустить». «Рекомендовать» подбирает режим под монитор."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modus wählen und starten. Die Empfehlung richtet sich nach dem Bildschirm."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elige un modo e inicia. La recomendación se adapta a la pantalla."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Choisissez un mode et démarrez. La recommandation tient compte de l’écran."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pilih mode lalu mulai. Rekomendasi mengikuti layar."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Scegli una modalità e avvia. Il consiglio si adatta allo schermo."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "モードを選んで開始します。推奨設定は画面に合わせます。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "모드를 선택하고 시작하세요. 권장 설정은 화면에 맞춥니다."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kies een modus en start. Het advies past bij het scherm."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wybierz tryb i uruchom. Rekomendacja uwzględnia ekran."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Escolha um modo e inicie. A recomendação considera a tela."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "选择模式并开始。推荐设置根据显示器选择。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "選擇模式並開始。建議設定依顯示器選擇。"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chọn chế độ rồi bắt đầu. Đề xuất dựa trên màn hình."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bir mod seçip başlatın. Öneri ekrana göre belirlenir."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เลือกโหมดแล้วเริ่ม คำแนะนำจะอิงตามจอภาพ"
+          }
+        }
+      }
+    },
+    "capture.device": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Capture device"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Устройство"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gerät"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dispositivo"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Périphérique"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Perangkat"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dispositivo"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "デバイス"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "장치"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apparaat"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Urządzenie"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dispositivo"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设备"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "裝置"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thiết bị"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aygıt"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "อุปกรณ์"
+          }
+        }
+      }
+    },
+    "capture.mode": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB capture mode"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Режим USB-захвата"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB-Aufnahmemodus"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modo de captura USB"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mode de capture USB"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mode tangkapan USB"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modalità acquisizione USB"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USBキャプチャモード"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB 캡처 모드"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB-opnamemodus"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tryb przechwytywania USB"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Modo de captura USB"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB 采集模式"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB 擷取模式"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Chế độ thu USB"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB yakalama modu"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "โหมดจับภาพ USB"
+          }
+        }
+      }
+    },
+    "capture.profile": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Processing"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Обработка"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verarbeitung"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Procesamiento"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Traitement"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pemrosesan"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elaborazione"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "処理"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "처리"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verwerking"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przetwarzanie"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Processamento"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "处理"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "處理"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Xử lý"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "İşleme"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "การประมวลผล"
+          }
+        }
+      }
+    },
+    "capture.display": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Output display"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Монитор вывода"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ausgabebildschirm"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pantalla de salida"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Écran de sortie"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Layar keluaran"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Schermo di uscita"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "出力ディスプレイ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "출력 디스플레이"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uitvoerscherm"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ekran wyjściowy"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tela de saída"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "输出显示器"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "輸出顯示器"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Màn hình đầu ra"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Çıkış ekranı"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "จอภาพปลายทาง"
+          }
+        }
+      }
+    },
+    "capture.profile30": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 → 60 FPS · selected game rate"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 → 60 FPS · частота игры задана вручную"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 → 60 FPS · gewählte Spielrate"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 → 60 FPS · frecuencia elegida"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 → 60 FPS · cadence choisie"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 → 60 FPS · laju gim pilihan"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 → 60 FPS · frequenza scelta"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 → 60 FPS · ゲームの頻度を指定"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 → 60 FPS · 게임 주사율 지정"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 → 60 FPS · gekozen speltempo"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 → 60 FPS · wybrana liczba klatek gry"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 → 60 FPS · taxa do jogo escolhida"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 → 60 FPS · 手动指定游戏帧率"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 → 60 FPS · 手動指定遊戲影格率"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 → 60 FPS · tốc độ trò chơi đã chọn"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 → 60 FPS · seçilen oyun hızı"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "30 → 60 FPS · กำหนดอัตราเกมเอง"
+          }
+        }
+      }
+    },
+    "capture.profile60": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "60 → 120 FPS · native input ×2"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "60 → 120 FPS · входные кадры ×2"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "60 → 120 FPS · Eingang ×2"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "60 → 120 FPS · entrada ×2"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "60 → 120 FPS · entrée ×2"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "60 → 120 FPS · masukan ×2"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "60 → 120 FPS · ingresso ×2"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "60 → 120 FPS · 入力×2"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "60 → 120 FPS · 입력 ×2"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "60 → 120 FPS · invoer ×2"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "60 → 120 FPS · wejście ×2"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "60 → 120 FPS · entrada ×2"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "60 → 120 FPS · 输入 ×2"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "60 → 120 FPS · 輸入 ×2"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "60 → 120 FPS · đầu vào ×2"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "60 → 120 FPS · giriş ×2"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "60 → 120 FPS · อินพุต ×2"
+          }
+        }
+      }
+    },
+    "capture.profileOff": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Original · lowest latency"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Оригинал · минимальная задержка"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Original · geringste Verzögerung"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Original · mínima latencia"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Original · latence minimale"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Asli · latensi terendah"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Originale · latenza minima"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "オリジナル · 最小遅延"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "원본 · 최소 지연"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Origineel · minimale vertraging"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Oryginał · minimalne opóźnienie"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Original · menor latência"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "原始画面 · 最低延迟"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "原始畫面 · 最低延遲"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gốc · độ trễ thấp nhất"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Orijinal · en düşük gecikme"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ต้นฉบับ · หน่วงน้อยที่สุด"
+          }
+        }
+      }
+    },
+    "capture.recommend": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recommend"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Рекомендовать"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Empfehlen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recomendar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recommander"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rekomendasikan"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Consiglia"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "推奨設定"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "권장 설정"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aanbevelen"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zalecane"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Recomendar"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "推荐设置"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "建議設定"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Đề xuất"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Öner"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แนะนำ"
+          }
+        }
+      }
+    },
+    "capture.refresh": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Refresh"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Обновить список"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aktualisieren"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Actualizar"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Actualiser"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Segarkan"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aggiorna"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "更新"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "새로 고침"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vernieuwen"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odśwież"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atualizar"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "刷新"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "重新整理"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Làm mới"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yenile"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "รีเฟรช"
+          }
+        }
+      }
+    },
+    "capture.elgato": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elgato settings…"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Настройки Elgato…"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elgato-Einstellungen…"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajustes de Elgato…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réglages Elgato…"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pengaturan Elgato…"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impostazioni Elgato…"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elgato設定…"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elgato 설정…"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elgato-instellingen…"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ustawienia Elgato…"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajustes Elgato…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elgato 设置…"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elgato 設定…"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cài đặt Elgato…"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elgato ayarları…"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "การตั้งค่า Elgato…"
+          }
+        }
+      }
+    },
+    "capture.fullscreen": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fullscreen video"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Видео на весь экран"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Video im Vollbild"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vídeo a pantalla completa"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vidéo plein écran"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Video layar penuh"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Video a schermo intero"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "動画を全画面表示"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "동영상 전체 화면"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Video op volledig scherm"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wideo na pełnym ekranie"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vídeo em tela cheia"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "视频全屏"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "影片全螢幕"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Video toàn màn hình"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tam ekran video"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "วิดีโอเต็มจอ"
+          }
+        }
+      }
+    },
+    "capture.copy": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copy diagnostics"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Копировать диагностику"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diagnose kopieren"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiar diagnóstico"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copier le diagnostic"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Salin diagnostik"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copia diagnostica"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "診断をコピー"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "진단 복사"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Diagnose kopiëren"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kopiuj diagnostykę"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Copiar diagnóstico"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "复制诊断"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "複製診斷"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sao chép chẩn đoán"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tanılamayı kopyala"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "คัดลอกการวินิจฉัย"
+          }
+        }
+      }
+    },
+    "capture.noDevice": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No external capture device. Connect the card and refresh."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Нет внешней карты захвата. Подключи её и обнови список."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Keine externe Capture-Karte. Anschließen und aktualisieren."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "No hay capturadora externa. Conéctala y actualiza."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucune carte externe. Connectez-la et actualisez."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tidak ada kartu eksternal. Hubungkan lalu segarkan."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nessuna scheda esterna. Collegala e aggiorna."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "外部キャプチャーカードがありません。接続して更新してください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "외부 캡처 카드가 없습니다. 연결한 후 새로 고치세요."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geen externe capturekaart. Sluit aan en vernieuw."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Brak zewnętrznej karty. Podłącz ją i odśwież."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Nenhuma placa externa. Conecte e atualize."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未发现外部采集卡。请连接后刷新。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "未找到外接擷取卡。請連接後重新整理。"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Không có thẻ thu ngoài. Kết nối rồi làm mới."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Harici yakalama kartı yok. Bağlayıp yenileyin."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ไม่พบการ์ดจับภาพภายนอก เชื่อมต่อแล้วรีเฟรช"
+          }
+        }
+      }
+    },
+    "capture.changed": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Settings changed. Press Start to apply."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Настройки изменены. Нажми «Запустить», чтобы применить."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Einstellungen geändert. Zum Anwenden starten."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajustes cambiados. Inicia para aplicarlos."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Réglages modifiés. Démarrez pour les appliquer."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pengaturan berubah. Mulai untuk menerapkan."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Impostazioni modificate. Avvia per applicarle."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定が変更されました。開始すると適用します。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "설정이 변경되었습니다. 시작하면 적용됩니다."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Instellingen gewijzigd. Start om toe te passen."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ustawienia zmienione. Uruchom, aby zastosować."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ajustes alterados. Inicie para aplicar."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "设置已更改。点击开始以应用。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "設定已變更。按開始以套用。"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Đã đổi cài đặt. Bắt đầu để áp dụng."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ayarlar değişti. Uygulamak için başlatın."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เปลี่ยนการตั้งค่าแล้ว กดเริ่มเพื่อใช้"
+          }
+        }
+      }
+    },
+    "capture.permission": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Allow Camera (and Microphone for HDMI audio) in System Settings → Privacy & Security, then retry."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Разреши «Камеру» (и «Микрофон» для HDMI-звука) в Системных настройках → Конфиденциальность и безопасность, затем повтори запуск."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kamera und für HDMI-Ton Mikrofon unter Systemeinstellungen → Datenschutz & Sicherheit erlauben."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Permite Cámara y, para audio HDMI, Micrófono en Ajustes del Sistema → Privacidad y seguridad."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Autorisez Caméra et, pour le son HDMI, Microphone dans Réglages Système → Confidentialité et sécurité."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Izinkan Kamera dan Mikrofon untuk audio HDMI di Pengaturan Sistem → Privasi & Keamanan."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Consenti Fotocamera e, per audio HDMI, Microfono in Impostazioni di Sistema → Privacy e sicurezza."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "システム設定 → プライバシーとセキュリティでカメラとHDMI音声用のマイクを許可してください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "시스템 설정 → 개인정보 보호 및 보안에서 카메라와 HDMI 오디오용 마이크를 허용하세요."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sta Camera en voor HDMI-audio Microfoon toe in Systeeminstellingen → Privacy en beveiliging."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zezwól na Kamerę i Mikrofon dla dźwięku HDMI w Ustawieniach systemowych → Prywatność i ochrona."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Permita Câmera e Microfone para áudio HDMI em Ajustes do Sistema → Privacidade e Segurança."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "请在系统设置 → 隐私与安全性中允许摄像头，以及 HDMI 音频所需的麦克风权限。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "請在系統設定 → 隱私權與安全性中允許相機，以及 HDMI 音訊所需的麥克風權限。"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cho phép Camera và Micrô cho âm thanh HDMI trong Cài đặt hệ thống → Quyền riêng tư & Bảo mật."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sistem Ayarları → Gizlilik ve Güvenlik’te Kamera ve HDMI sesi için Mikrofon izni verin."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "อนุญาตกล้องและไมโครโฟนสำหรับเสียง HDMI ในการตั้งค่าระบบ → ความเป็นส่วนตัวและความปลอดภัย"
+          }
+        }
+      }
+    },
+    "capture.starting": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Starting capture and preparing the engine…"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Запускаю захват и подготавливаю обработку…"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aufnahme und Verarbeitung werden gestartet…"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciando captura y procesamiento…"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Démarrage de la capture et du traitement…"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Memulai tangkapan dan pemrosesan…"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Avvio acquisizione ed elaborazione…"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キャプチャと処理を準備中…"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "캡처 및 처리 시작 중…"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Opname en verwerking starten…"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uruchamianie przechwytywania i przetwarzania…"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Iniciando captura e processamento…"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在启动采集并准备处理…"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在啟動擷取並準備處理…"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Đang bắt đầu thu và xử lý…"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Yakalama ve işleme başlatılıyor…"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "กำลังเริ่มจับภาพและประมวลผล…"
+          }
+        }
+      }
+    },
+    "capture.stopped": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Stopped. The capture card is released."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Остановлено. Карта захвата освобождается."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gestoppt. Capture-Karte wird freigegeben."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Detenido. Liberando la capturadora."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Arrêté. Libération de la carte."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dihentikan. Melepaskan kartu tangkap."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fermato. Rilascio della scheda."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "停止しました。カードを解放中です。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "중지됨. 캡처 카드를 해제하는 중입니다."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gestopt. Capturekaart wordt vrijgegeven."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Zatrzymano. Zwalnianie karty."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Parado. Liberando a placa."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已停止，正在释放采集卡。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已停止，正在釋放擷取卡。"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Đã dừng. Đang giải phóng thẻ thu."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Durduruldu. Yakalama kartı serbest bırakılıyor."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "หยุดแล้ว กำลังคืนการ์ดจับภาพ"
+          }
+        }
+      }
+    },
+    "capture.live": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Direct USB capture is running."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Прямой USB-захват работает."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Direkte USB-Aufnahme läuft."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Captura USB directa activa."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Capture USB directe active."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tangkapan USB langsung berjalan."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Acquisizione USB diretta attiva."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB直接キャプチャ中。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "직접 USB 캡처 실행 중."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Directe USB-opname actief."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bezpośrednie przechwytywanie USB działa."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Captura USB direta ativa."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在直接采集 USB 视频。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "正在直接擷取 USB 影片。"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Đang thu USB trực tiếp."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Doğrudan USB yakalama çalışıyor."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "กำลังจับภาพ USB โดยตรง"
+          }
+        }
+      }
+    },
+    "capture.engineError": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Enhancement unavailable; check the selected profile."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Обработка недоступна; проверь выбранный профиль."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verarbeitung nicht verfügbar; Profil prüfen."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Procesamiento no disponible; revisa el perfil."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Traitement indisponible ; vérifiez le profil."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pemrosesan tidak tersedia; periksa profil."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Elaborazione non disponibile; controlla il profilo."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "処理を利用できません。プロファイルを確認してください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "처리를 사용할 수 없습니다. 프로필을 확인하세요."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verwerking niet beschikbaar; controleer het profiel."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Przetwarzanie niedostępne; sprawdź profil."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Processamento indisponível; verifique o perfil."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "处理不可用，请检查配置。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "無法處理，請檢查設定。"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Không thể xử lý; kiểm tra cấu hình."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "İşleme kullanılamıyor; profili denetleyin."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ไม่สามารถประมวลผลได้ ตรวจสอบโปรไฟล์"
+          }
+        }
+      }
+    },
+    "capture.usb": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Received USB video"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Получено по USB"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Empfangenes USB-Video"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vídeo USB recibido"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vidéo USB reçue"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Video USB diterima"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Video USB ricevuto"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "受信したUSB映像"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "수신한 USB 영상"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ontvangen USB-video"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Odebrane wideo USB"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vídeo USB recebido"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "收到的 USB 视频"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "收到的 USB 影片"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Video USB nhận được"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Alınan USB video"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "วิดีโอ USB ที่ได้รับ"
+          }
+        }
+      }
+    },
+    "capture.admitted": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Input to processing"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Вход в обработку"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verarbeitungseingang"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entrada al procesamiento"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entrée du traitement"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Masukan pemrosesan"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingresso elaborazione"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "処理への入力"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "처리 입력"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Invoer voor verwerking"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wejście przetwarzania"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entrada de processamento"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "处理输入"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "處理輸入"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Đầu vào xử lý"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "İşleme girişi"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "อินพุตประมวลผล"
+          }
+        }
+      }
+    },
+    "capture.changes": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sampled picture changes"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Изменения картинки (оценка)"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geschätzte Bildänderungen"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cambios de imagen estimados"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Changements d’image estimés"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Perkiraan perubahan gambar"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Cambiamenti immagine stimati"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "画像変化の推定"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "추정 화면 변화"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Geschatte beeldwijzigingen"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Szacowane zmiany obrazu"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Mudanças de imagem estimadas"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "估算画面变化"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "估計畫面變化"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thay đổi hình ảnh ước tính"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tahmini görüntü değişimleri"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "การเปลี่ยนภาพโดยประมาณ"
+          }
+        }
+      }
+    },
+    "capture.inference": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI processing size"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Размер AI-обработки"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "KI-Auflösung"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resolución de IA"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Résolution de l’IA"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resolusi pemrosesan AI"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Risoluzione IA"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI処理解像度"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI 처리 해상도"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI-resolutie"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rozdzielczość AI"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resolução da IA"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI 处理分辨率"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI 處理解析度"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Độ phân giải AI"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "AI işleme çözünürlüğü"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ความละเอียดประมวลผล AI"
+          }
+        }
+      }
+    },
+    "capture.presented": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Presented"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Показано"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Dargestellt"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Presentados"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Présentées"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ditampilkan"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Presentati"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "表示済み"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "표시됨"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Weergegeven"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wyświetlono"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Apresentados"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已呈现"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "已呈現"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Đã hiển thị"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gösterilen"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "แสดงแล้ว"
+          }
+        }
+      }
+    },
+    "capture.delay": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App buffering"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Буфер приложения"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App-Puffer"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Búfer de la app"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Tampon de l’app"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buffer aplikasi"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buffer dell’app"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "アプリのバッファ"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "앱 버퍼"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "App-buffer"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bufor aplikacji"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Buffer do app"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "应用缓冲"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "應用程式緩衝"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bộ đệm ứng dụng"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Uygulama arabelleği"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "บัฟเฟอร์แอป"
+          }
+        }
+      }
+    },
+    "capture.drops": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Capture drops"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Пропуски захвата"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Verworfene Aufnahmebilder"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fotogramas perdidos"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Images de capture perdues"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bingkai tangkapan terlewat"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Fotogrammi persi"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "キャプチャ欠落"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "캡처 누락"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gemiste opnameframes"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pominięte klatki"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Quadros perdidos"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "采集丢帧"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "擷取掉格"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Khung hình thu bị mất"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Atlanan yakalama kareleri"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "เฟรมจับภาพที่หลุด"
+          }
+        }
+      }
+    },
+    "capture.hdmi": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HDMI input: not exposed by UVC"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HDMI-вход: UVC не сообщает"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HDMI-Eingang: UVC meldet ihn nicht"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entrada HDMI: UVC no la informa"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entrée HDMI : non signalée par UVC"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Masukan HDMI: tidak dilaporkan UVC"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ingresso HDMI: non comunicato da UVC"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HDMI入力：UVCから取得不可"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HDMI 입력: UVC에서 제공하지 않음"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HDMI-invoer: niet gemeld door UVC"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wejście HDMI: UVC nie podaje"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Entrada HDMI: não informada por UVC"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HDMI 输入：UVC 未提供"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HDMI 輸入：UVC 未提供"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Đầu vào HDMI: UVC không cung cấp"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "HDMI girişi: UVC bildirmiyor"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "อินพุต HDMI: UVC ไม่รายงาน"
+          }
+        }
+      }
+    },
+    "capture.mismatch": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "The received USB size differs from the selected mode. Check Elgato settings."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Полученное USB-разрешение отличается от выбранного. Проверь настройки Elgato."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB-Auflösung weicht vom gewählten Modus ab. Elgato-Einstellungen prüfen."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La resolución USB difiere del modo elegido. Revisa Elgato."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La résolution USB diffère du mode choisi. Vérifiez Elgato."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resolusi USB berbeda dari mode pilihan. Periksa Elgato."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La risoluzione USB differisce dalla modalità scelta. Controlla Elgato."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB解像度が選択モードと異なります。Elgato設定を確認してください。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB 해상도가 선택한 모드와 다릅니다. Elgato 설정을 확인하세요."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB-resolutie wijkt af van de gekozen modus. Controleer Elgato."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rozdzielczość USB różni się od wybranego trybu. Sprawdź Elgato."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A resolução USB difere do modo escolhido. Verifique Elgato."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB 分辨率与所选模式不同，请检查 Elgato。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB 解析度與所選模式不同，請檢查 Elgato。"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Độ phân giải USB khác chế độ đã chọn. Kiểm tra Elgato."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB çözünürlüğü seçilen moddan farklı. Elgato’yu denetleyin."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ความละเอียด USB ต่างจากโหมดที่เลือก ตรวจสอบ Elgato"
+          }
+        }
+      }
+    },
+    "capture.video": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Console video"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Видео с консоли"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Konsolenvideo"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vídeo de consola"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vidéo de la console"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Video konsol"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Video console"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "コンソール映像"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "콘솔 영상"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Consolevideo"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Wideo konsoli"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Vídeo do console"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "主机视频"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "主機影片"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Video máy chơi game"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Konsol videosu"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "วิดีโอคอนโซล"
+          }
+        }
+      }
+    },
+    "capture.explanation": {
+      "comment": "Direct USB capture and console playback.",
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB resolution is measured, but does not prove the HDMI signal or the game’s internal render resolution. Check PS5 Settings → Screen and Video → Video Output Information for HDMI timing. 4K can be downscaled by the card. Recommended favors uncompressed capture near your display resolution at 60 Hz; 4K is an explicit quality option. For high-resolution modes check Elgato’s 10 Gbps USB setting and cable. “30 → 60” is your assumption, not automatic detection; sampled picture changes are only an estimate and fall on still scenes. AI may run at a lower resolution and restore frame size. P95 measures USB callback to drawable presentation, not controller-to-screen latency. HDMI audio monitoring is undelayed and may lead generated video."
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB-разрешение измеряется, но не доказывает HDMI-сигнал или внутреннее разрешение игры. HDMI проверь на PS5: Настройки → Экран и видео → Информация о видеовыходе. Карта может уменьшать 4K. Рекомендация выбирает несжатый захват около разрешения монитора при 60 Гц; 4K можно выбрать вручную. Для высоких режимов проверь 10 Гбит/с в Elgato и кабель. «30 → 60» — твоё предположение, не автоопределение; оценка изменений падает на статичной сцене. AI может считать в меньшем разрешении с восстановлением размера кадра. P95 — от получения USB-кадра до показа, не задержка геймпада. HDMI-звук идёт без дополнительного ожидания и может опережать обработанное видео."
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB-Auflösung beweist weder HDMI-Timing noch interne Spielauflösung. HDMI in den Videoausgabeinformationen der PS5 prüfen. Empfehlung: unkomprimiert nahe der Bildschirmauflösung bei 60 Hz; 4K manuell wählen. Für hohe Bandbreite Elgatos 10-Gbit/s-Modus und Kabel prüfen. 30→60 ist eine Vorgabe, keine Erkennung; Bildänderungen sind nur geschätzt. KI kann kleiner rechnen. P95 misst USB-Empfang bis Darstellung, nicht Controller-Latenz. HDMI-Ton kann dem Video vorauseilen."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La resolución USB no demuestra la señal HDMI ni la resolución interna del juego. Consulta la información de salida de vídeo de PS5. Recomendado: captura sin compresión cercana a tu pantalla a 60 Hz; 4K es manual. Comprueba el modo USB de 10 Gbit/s y el cable de Elgato. 30→60 es una suposición, no detección; los cambios son estimaciones. La IA puede procesar a menor resolución. P95 mide de USB a presentación, no desde el mando. El audio HDMI puede adelantarse al vídeo."
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La résolution USB ne prouve ni le signal HDMI ni la résolution interne du jeu. Consultez les informations de sortie vidéo de la PS5. Recommandation : capture non compressée proche de l’écran à 60 Hz ; 4K au choix. Vérifiez le mode USB 10 Gbit/s et le câble Elgato. 30→60 est une hypothèse, pas une détection ; les changements sont estimés. L’IA peut travailler à moindre résolution. P95 mesure de la réception USB à l’affichage, pas depuis la manette. Le son HDMI peut précéder la vidéo."
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Resolusi USB tidak membuktikan sinyal HDMI atau resolusi internal gim. Periksa informasi keluaran video PS5. Rekomendasi memilih tangkapan tanpa kompresi mendekati resolusi layar pada 60 Hz; 4K dipilih manual. Periksa mode USB 10 Gbit/dtk dan kabel Elgato. 30→60 adalah asumsi, bukan deteksi; perubahan gambar hanya perkiraan. AI dapat memproses pada resolusi lebih rendah. P95 mengukur dari USB hingga tampilan, bukan dari pengontrol. Audio HDMI dapat mendahului video."
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "La risoluzione USB non dimostra il segnale HDMI o la risoluzione interna del gioco. Controlla le informazioni uscita video PS5. Consigliata acquisizione non compressa vicina allo schermo a 60 Hz; 4K manuale. Controlla modalità USB 10 Gbit/s e cavo Elgato. 30→60 è un’ipotesi, non un rilevamento; i cambiamenti sono stime. L’IA può lavorare a risoluzione inferiore. P95 misura da USB alla presentazione, non dal controller. L’audio HDMI può precedere il video."
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB解像度からHDMI信号やゲーム内部の解像度は分かりません。PS5の映像出力情報を確認してください。推奨は画面に近い解像度の非圧縮60 Hzです。4Kは手動で選択します。ElgatoのUSB 10 Gbit/s設定とケーブルを確認してください。30→60は指定値であり自動検出ではありません。画像変化は推定で、静止画では低下します。AIは低解像度で処理する場合があります。P95はUSB受信から表示までで、コントローラーからの遅延ではありません。HDMI音声が映像より先行する場合があります。"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB 해상도로 HDMI 신호나 게임 내부 렌더링 해상도를 확인할 수 없습니다. PS5 영상 출력 정보를 확인하세요. 권장 설정은 화면 해상도에 가까운 비압축 60 Hz이며 4K는 수동 선택입니다. Elgato의 USB 10 Gbit/s 설정과 케이블을 확인하세요. 30→60은 가정이며 자동 감지가 아닙니다. 화면 변화는 추정치로 정지 화면에서는 낮아집니다. AI는 낮은 해상도로 처리할 수 있습니다. P95는 USB 수신부터 표시까지이며 컨트롤러 지연이 아닙니다. HDMI 오디오가 영상보다 빠를 수 있습니다."
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB-resolutie bewijst geen HDMI-signaal of interne spelresolutie. Controleer de video-uitvoerinformatie op PS5. Advies: ongecomprimeerd nabij de schermresolutie op 60 Hz; kies 4K handmatig. Controleer Elgato USB 10 Gbit/s en de kabel. 30→60 is een aanname, geen detectie; beeldwijzigingen zijn een schatting. AI kan lager rekenen. P95 meet USB-ontvangst tot weergave, niet controllervertraging. HDMI-audio kan voorlopen."
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Rozdzielczość USB nie dowodzi sygnału HDMI ani wewnętrznej rozdzielczości gry. Sprawdź informacje o wyjściu wideo PS5. Zalecane: bez kompresji, blisko rozdzielczości ekranu, 60 Hz; 4K wybierz ręcznie. Sprawdź tryb USB 10 Gbit/s i kabel Elgato. 30→60 to założenie, nie wykrywanie; zmiany obrazu są szacowane. AI może pracować w niższej rozdzielczości. P95 mierzy od USB do wyświetlenia, nie od kontrolera. Dźwięk HDMI może wyprzedzać obraz."
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "A resolução USB não comprova o sinal HDMI nem a resolução interna do jogo. Confira as informações de saída de vídeo do PS5. Recomendado: captura sem compressão próxima à resolução da tela a 60 Hz; 4K manual. Confira USB 10 Gbit/s e cabo Elgato. 30→60 é uma suposição, não detecção; mudanças são estimativas. A IA pode usar resolução menor. P95 mede de USB até apresentação, não desde o controle. O áudio HDMI pode adiantar o vídeo."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB 分辨率不能证明 HDMI 信号或游戏内部渲染分辨率。请查看 PS5 的视频输出信息。推荐使用接近显示器分辨率的无压缩 60 Hz；4K 需手动选择。检查 Elgato 的 USB 10 Gbit/s 设置及线缆。30→60 是手动假设而非自动检测；画面变化仅为估算，静止时会降低。AI 可能使用较低分辨率处理。P95 测量从收到 USB 帧到呈现的时间，不含手柄延迟。HDMI 音频可能领先视频。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB 解析度不能證明 HDMI 訊號或遊戲內部算繪解析度。請查看 PS5 的影像輸出資訊。建議使用接近顯示器解析度的無壓縮 60 Hz；4K 請手動選擇。檢查 Elgato 的 USB 10 Gbit/s 設定與線材。30→60 是手動假設而非自動偵測；畫面變化僅為估計，靜止時會降低。AI 可能以較低解析度處理。P95 測量從收到 USB 影格到呈現的時間，不含控制器延遲。HDMI 音訊可能領先影片。"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Độ phân giải USB không xác nhận tín hiệu HDMI hay độ phân giải kết xuất nội bộ. Kiểm tra thông tin đầu ra video PS5. Đề xuất thu không nén gần độ phân giải màn hình ở 60 Hz; chọn 4K thủ công. Kiểm tra USB 10 Gbit/s và cáp Elgato. 30→60 là giả định, không tự phát hiện; thay đổi hình ảnh chỉ là ước tính. AI có thể xử lý ở độ phân giải thấp hơn. P95 đo từ USB đến hiển thị, không từ tay cầm. Âm thanh HDMI có thể đi trước video."
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "USB çözünürlüğü HDMI sinyalini veya oyunun dahili çözünürlüğünü kanıtlamaz. PS5 video çıkış bilgilerini denetleyin. Öneri: ekran çözünürlüğüne yakın sıkıştırılmamış 60 Hz; 4K elle seçilir. Elgato USB 10 Gbit/sn ayarını ve kabloyu denetleyin. 30→60 bir varsayımdır, algılama değildir; görüntü değişimleri tahminidir. AI daha düşük çözünürlükte çalışabilir. P95 USB’den sunuma ölçülür, kontrolcü gecikmesi değildir. HDMI sesi videodan önce gelebilir."
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ความละเอียด USB ไม่ยืนยันสัญญาณ HDMI หรือความละเอียดเรนเดอร์ในเกม ตรวจสอบข้อมูลเอาต์พุตวิดีโอ PS5 แนะนำแบบไม่บีบอัดใกล้ความละเอียดจอที่ 60 Hz ส่วน 4K เลือกเอง ตรวจสอบโหมด USB 10 Gbit/s และสาย Elgato 30→60 เป็นข้อสมมติ ไม่ใช่การตรวจจับอัตโนมัติ การเปลี่ยนภาพเป็นเพียงค่าประมาณ AI อาจประมวลผลที่ความละเอียดต่ำกว่า P95 วัดจากรับ USB ถึงแสดงผล ไม่รวมความหน่วงของคอนโทรลเลอร์ เสียง HDMI อาจนำหน้าวิดีโอ"
+          }
+        }
+      }
     }
   },
   "version": "1.0"
