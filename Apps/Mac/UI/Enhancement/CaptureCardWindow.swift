@@ -15,7 +15,17 @@ private final class CaptureCardStackView: NSStackView {
     private let devicePicker = NSPopUpButton()
     private let modePicker = NSPopUpButton()
     private let profilePicker = NSPopUpButton()
+    private let enginePicker = NSPopUpButton()
+    private let engines: [(id: String, model: String, quality: String, title: String)] = [
+        ("apple.lowlatency", "vt.llfi.temporal.1", "normal", "Apple Low Latency"),
+        ("rife.metal", "rife-v4.25", "fast", "ODF-VFI (RIFE) · Fast"),
+        ("rife.metal", "rife-v4.25", "balanced", "ODF-VFI (RIFE) · Balanced"),
+        ("rife.metal", "rife-v4.25", "hq", "ODF-VFI (RIFE) · HQ"),
+        ("apple.frc", "vt.frc.normal", "normal", "Apple FRC · Normal"),
+        ("apple.frc", "vt.frc.quality", "quality", "Apple FRC · Quality")
+    ]
     private let screenPicker = NSPopUpButton()
+    private let fourKButton = NSButton(title: "4K30 → 60 · RIFE", target: nil, action: nil)
     private let audio = NSButton(checkboxWithTitle: L("capture.audio"), target: nil, action: nil)
     private let startButton = NSButton(title: L("capture.start"), target: nil, action: nil)
     private let status = NSTextField(wrappingLabelWithString: L("capture.ready"))
@@ -66,7 +76,9 @@ private final class CaptureCardStackView: NSStackView {
         refreshDevices()
     }
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
-    func show() { showWindow(nil); window?.makeKeyAndOrderFront(nil); NSApp.activate(ignoringOtherApps: true) }
+    func show() {
+        showWindow(nil); window?.makeKeyAndOrderFront(nil); NSApp.activate(ignoringOtherApps: true)
+    }
     private func buildUI() {
         let root = CaptureCardStackView(); root.orientation = .vertical; root.alignment = .leading; root.spacing = 14
         root.edgeInsets = NSEdgeInsets(top: 20, left: 22, bottom: 20, right: 22)
@@ -84,6 +96,11 @@ private final class CaptureCardStackView: NSStackView {
         profilePicker.addItems(withTitles: [L("capture.profile30"), L("capture.profile60"), L("capture.profileOff")])
         profilePicker.selectItem(at: max(0, min(2, UserDefaults.standard.integer(forKey: "CaptureCard.profile"))))
         row(L("capture.profile"), profilePicker)
+        enginePicker.addItems(withTitles: engines.enumerated().map { index, engine in
+            engine.title + ((index == 2 || index == 3) ? " · " + L("capture.experimental") : "")
+        })
+        enginePicker.selectItem(at: max(0, min(engines.count - 1, UserDefaults.standard.integer(forKey: "CaptureCard.engine"))))
+        row(L("capture.engine"), enginePicker)
         row(L("capture.display"), screenPicker)
         audio.state = (UserDefaults.standard.object(forKey: "CaptureCard.audio") == nil || UserDefaults.standard.bool(forKey: "CaptureCard.audio")) ? .on : .off
         root.addArrangedSubview(audio)
@@ -92,6 +109,8 @@ private final class CaptureCardStackView: NSStackView {
             actions.addArrangedSubview(NSButton(title: title, target: self, action: action))
         }
         root.addArrangedSubview(actions)
+        fourKButton.target = self; fourKButton.action = #selector(selectFourK)
+        root.addArrangedSubview(fourKButton)
         startButton.target = self; startButton.action = #selector(toggleCapture); startButton.bezelStyle = .rounded
         startButton.keyEquivalent = "\r"
         let buttons = NSStackView(views: [startButton, NSButton(title: L("capture.fullscreen"), target: self, action: #selector(fullscreen)), NSButton(title: L("capture.copy"), target: self, action: #selector(copyReport))]); buttons.spacing = 10
@@ -104,8 +123,9 @@ private final class CaptureCardStackView: NSStackView {
         advice.font = .systemFont(ofSize: 12); advice.textColor = .secondaryLabelColor
         root.addArrangedSubview(advice)
         for field in [status, telemetry, advice] { field.widthAnchor.constraint(equalTo: root.widthAnchor, constant: -44).isActive = true }
-        for picker in [devicePicker, modePicker, profilePicker, screenPicker] { picker.target = self }
+        for picker in [devicePicker, modePicker, profilePicker, enginePicker, screenPicker] { picker.target = self }
         devicePicker.action = #selector(deviceChanged); modePicker.action = #selector(settingsChanged)
+        enginePicker.action = #selector(settingsChanged)
         profilePicker.action = #selector(settingsChanged); screenPicker.action = #selector(displayChanged)
         audio.target = self; audio.action = #selector(settingsChanged)
         let scroll = NSScrollView(); scroll.hasVerticalScroller = true; scroll.drawsBackground = false
@@ -124,11 +144,14 @@ private final class CaptureCardStackView: NSStackView {
         status.stringValue = devices.isEmpty ? L("capture.noDevice") : L("capture.ready")
     }
     private func refreshScreens() {
-        let selected = screenPicker.indexOfSelectedItem
+        let selectedID = selectedScreen.map(screenID)
         screens = NSScreen.screens
         screenPicker.removeAllItems()
         screenPicker.addItems(withTitles: screens.map { "\($0.localizedName) · \(Int(displaySize($0).width))×\(Int(displaySize($0).height)) · \(Int(refreshHz($0))) Hz" })
-        if screens.indices.contains(selected) { screenPicker.selectItem(at: selected) }
+        if let selectedID, let index = screens.firstIndex(where: { screenID($0) == selectedID }) { screenPicker.selectItem(at: index) }
+    }
+    private func screenID(_ screen: NSScreen) -> CGDirectDisplayID {
+        (screen.deviceDescription[NSDeviceDescriptionKey("NSScreenNumber")] as? NSNumber)?.uint32Value ?? 0
     }
     private func displaySize(_ screen: NSScreen) -> NSSize {
         let id = (screen.deviceDescription[NSDeviceDescriptionKey("NSScreenNumber")] as? NSNumber)?.uint32Value ?? 0
@@ -144,13 +167,36 @@ private final class CaptureCardStackView: NSStackView {
     private func loadModes() {
         modes = devices.indices.contains(devicePicker.indexOfSelectedItem) ? CaptureCardMode.list(devices[devicePicker.indexOfSelectedItem]) : []
         modePicker.removeAllItems(); modePicker.addItems(withTitles: modes.map(\.label))
+        fourKButton.isEnabled = fourKModeIndex != nil
         if let saved = UserDefaults.standard.string(forKey: "CaptureCard.mode"), let index = modes.firstIndex(where: { $0.label == saved }) { modePicker.selectItem(at: index) }
         else { recommend() }
+    }
+    private var fourKModeIndex: Int? {
+        modes.indices.filter { modes[$0].width == 3840 && modes[$0].height == 2160 &&
+            modes[$0].subtype == kCVPixelFormatType_420YpCbCr8BiPlanarVideoRange && abs(modes[$0].fps - 30) < 0.1
+        }.min { abs(modes[$0].fps - 30) < abs(modes[$1].fps - 30) }
+    }
+    @objc private func selectFourK() {
+        guard let index = fourKModeIndex else { return }
+        settingsChanged(); modePicker.selectItem(at: index)
+        profilePicker.selectItem(at: 0); enginePicker.selectItem(at: 1)
     }
     @objc private func deviceChanged() { stop(); loadModes() }
     @objc private func settingsChanged() { if running || requestingPermission { stop(); status.stringValue = L("capture.changed") } }
     @objc private func displayChanged() { settingsChanged(); moveOutput() }
-    @objc private func displaysChanged() { stop(); refreshScreens() }
+    @objc private func displaysChanged() {
+        // Fullscreen/Space changes can announce screen-parameter changes without
+        // disconnecting a monitor. Preserve capture and selection by display ID.
+        let previousID = selectedScreen.map(screenID)
+        refreshScreens()
+        if let previousID, !screens.contains(where: { screenID($0) == previousID }) {
+            stop(); moveOutput(); return
+        }
+        if running, let screen = outputWindow?.screen ?? selectedScreen {
+            processor.updateDisplayRefreshHz(refreshHz(screen))
+        }
+        preview.refreshVisibilitySnapshot()
+    }
     @objc private func recommend() {
         settingsChanged()
         let size = selectedScreen.map(displaySize) ?? NSSize(width: 1920, height: 1080)
@@ -195,9 +241,11 @@ private final class CaptureCardStackView: NSStackView {
         processor.adoptSourceGeneration(generation)
         let request = SPLivePlanRequest()
         request.requestID = generation; request.captureSourceKind = .captureCard
-        request.engineID = "apple.lowlatency"; request.modelID = "vt.llfi.temporal.1"; request.qualityID = "normal"
+        let engine = engines[max(0, enginePicker.indexOfSelectedItem)]
+        request.engineID = engine.id; request.modelID = engine.model; request.qualityID = engine.quality
+        request.rifeStreamEnabled = true
         request.interpolationEnabled = profilePicker.indexOfSelectedItem != 2
-        request.quality = 1; request.rateKind = .multiplier; request.multiplier = 2
+        request.quality = engine.quality == "quality" ? 2 : 1; request.rateKind = .multiplier; request.multiplier = 2
         request.scaleEnabled = false; request.scaleQualityID = "normal"
         request.outputWidth = Int32(mode.width); request.outputHeight = Int32(mode.height)
         request.viewMode = .enhanced; request.captureCapFPS = Int32(mode.fps.rounded())
@@ -209,6 +257,7 @@ private final class CaptureCardStackView: NSStackView {
         source.start(deviceID: device.uniqueID, mode: mode, generation: generation,
                      thirtyFPS: profilePicker.indexOfSelectedItem == 0, audio: audio.state == .on)
         for (key, value) in [("device", device.uniqueID), ("mode", mode.label)] { UserDefaults.standard.set(value, forKey: "CaptureCard." + key) }
+        UserDefaults.standard.set(enginePicker.indexOfSelectedItem, forKey: "CaptureCard.engine")
         UserDefaults.standard.set(profilePicker.indexOfSelectedItem, forKey: "CaptureCard.profile")
         UserDefaults.standard.set(audio.state == .on, forKey: "CaptureCard.audio")
         startButton.title = L("capture.stop"); status.stringValue = L("capture.starting")
@@ -222,6 +271,7 @@ private final class CaptureCardStackView: NSStackView {
         source?.stop(); processor.stop(); monitorTimer?.invalidate(); monitorTimer = nil
         startButton.title = L("capture.start"); status.stringValue = L("capture.stopped")
         lastReceipt = nil; lastStats = [:]; telemetry.stringValue = "—"
+        outputWindow?.title = "OpenDuckFrame · " + L("capture.video") + " · — FPS"
     }
     private func received(_ receipt: CaptureCardReceipt) {
         guard running, receipt.generation == generation else { return }
@@ -241,15 +291,18 @@ private final class CaptureCardStackView: NSStackView {
             guard statsFresh, let n = lastStats[key] as? NSNumber, n.doubleValue >= 0 else { return "—" }
             return String(format: "%.1f", n.doubleValue)
         }
+        let videoTitle = "OpenDuckFrame · " + L("capture.video") + " · " + number("overlayPresentedFPS") + " FPS"
+        if outputWindow?.title != videoTitle { outputWindow?.title = videoTitle }
         let usb = fresh ? String(format: "%.2f", r.usbFPS) : "—"
         let admitted = fresh ? String(format: "%.2f", r.admittedFPS) : "—"
         let changed = fresh ? String(format: "%.1f", r.sampledChangeFPS) : "—"
         let width = (lastStats["processingWidth"] as? NSNumber)?.intValue ?? 0
         let height = (lastStats["processingHeight"] as? NSNumber)?.intValue ?? 0
+        let inference = width > 0 && height > 0 ? "\(width)×\(height)" : "—"
         let link = r.linkGbps.map { String(format: "%.1f Gbit/s", $0) } ?? "—"
         telemetry.stringValue = "USB: \(link)\n\(L("capture.usb")): \(r.width)×\(r.height) · \(r.pixelFormat) · \(usb) FPS\n" +
             "\(L("capture.admitted")): \(admitted) FPS · \(L("capture.changes")): ≈\(changed) /s\n" +
-            "\(L("capture.inference")): \(width)×\(height) · \(L("capture.presented")): \(number("overlayPresentedFPS")) FPS\n" +
+            "\(L("capture.inference")): \(inference) · \(L("capture.presented")): \(number("overlayPresentedFPS")) FPS\n" +
             "\(L("capture.delay")): \(number("delayMs")) ms · P95: \(number("p95ms")) ms\n" +
             "\(L("capture.drops")): \(r.driverDrops) · \(L("capture.hdmi"))"
         if let mode = modes.indices.contains(modePicker.indexOfSelectedItem) ? modes[modePicker.indexOfSelectedItem] : nil,
@@ -271,20 +324,27 @@ private final class CaptureCardStackView: NSStackView {
         let bounds = screen.visibleFrame
         outputWindow.setFrame(NSRect(x: bounds.minX + bounds.width*0.08, y: bounds.minY + bounds.height*0.08, width: bounds.width*0.84, height: bounds.height*0.84), display: true)
     }
-    @objc private func fullscreen() { if outputWindow == nil { showOutput() }; outputWindow?.toggleFullScreen(nil) }
+    @objc private func fullscreen() {
+        if outputWindow == nil { showOutput() }
+        outputWindow?.makeKeyAndOrderFront(nil)
+        outputWindow?.toggleFullScreen(nil)
+    }
     @objc private func openElgato() {
         if let url = NSWorkspace.shared.urlForApplication(withBundleIdentifier: "com.elgato.CaptureDeviceUtility") { NSWorkspace.shared.openApplication(at: url, configuration: .init()) }
         else { NSWorkspace.shared.open(URL(fileURLWithPath: "/Applications/Elgato Capture Device Utility.app")) }
     }
     @objc private func copyReport() {
-        let text = "OpenDuckFrame capture card\n" + (devicePicker.titleOfSelectedItem ?? "") + "\nRequested USB: " + (modePicker.titleOfSelectedItem ?? "") + "\n" + (profilePicker.titleOfSelectedItem ?? "") + "\n" + (screenPicker.titleOfSelectedItem ?? "") + "\n" + status.stringValue + "\n" + telemetry.stringValue + "\n" + L("capture.explanation")
-        let keys = ["overlayPresentedFPS", "syntheticOK", "frcP95ms", "frcEwmaMs", "captureToModelReadyP95ms", "captureToOutputReadyP95ms", "delayMs", "lateReadyDrops", "deadlineDrops", "pendingExpiredDrops", "queueDrops", "renderDrops", "epochPhysicalSource", "epochPhysicalSynthetic", "firstPresentationFailureLifetime"]
+        let text = "OpenDuckFrame capture card\n" + (devicePicker.titleOfSelectedItem ?? "") + "\nRequested USB: " + (modePicker.titleOfSelectedItem ?? "") + "\n" + (enginePicker.titleOfSelectedItem ?? "") + "\n" + (profilePicker.titleOfSelectedItem ?? "") + "\n" + (screenPicker.titleOfSelectedItem ?? "") + "\n" + status.stringValue + "\n" + telemetry.stringValue + "\n" + L("capture.explanation")
+        let keys = ["sourceWidth", "sourceHeight", "processingWidth", "processingHeight", "presentedWidth", "presentedHeight", "presentedSource", "presentedSynthetic", "outputPresentedValidTime", "presentationFailuresLifetime", "displayRefreshHz", "delayByteClamped", "overlayPresentedFPS", "syntheticOK", "frcP95ms", "frcEwmaMs", "captureToModelReadyP95ms", "captureToOutputReadyP95ms", "delayMs", "lateReadyDrops", "deadlineDrops", "pendingExpiredDrops", "queueDrops", "renderDrops", "epochPhysicalSource", "epochPhysicalSynthetic", "firstPresentationFailureLifetime"]
         let metrics = lastStats.filter { keys.contains($0.key) }
         let data = try? JSONSerialization.data(withJSONObject: metrics, options: [.sortedKeys])
         let details = data.flatMap { String(data: $0, encoding: .utf8) } ?? "{}"
         NSPasteboard.general.clearContents(); NSPasteboard.general.setString(text + "\n" + details, forType: .string)
     }
-    func windowWillClose(_ notification: Notification) { stop(); if notification.object as? NSWindow === window { outputWindow?.orderOut(nil) } }
+    func windowWillClose(_ notification: Notification) {
+        guard let closing = notification.object as? NSWindow, closing === window || closing === outputWindow else { return }
+        stop(); if closing === window { outputWindow?.orderOut(nil) }
+    }
     func windowDidChangeOcclusionState(_ notification: Notification) { preview.refreshVisibilitySnapshot() }
     func windowDidResize(_ notification: Notification) { preview.refreshVisibilitySnapshot() }
     func windowDidChangeScreen(_ notification: Notification) {

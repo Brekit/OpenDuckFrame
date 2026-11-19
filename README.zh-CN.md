@@ -1,4 +1,4 @@
-> **主机采集分支：**支持直接 USB 采集、格式选择、30→60/60→120 配置及实测诊断。打开 **文件 → Capture card**。详见[采集卡指南](docs/capture-card.md)。已禁用上游自动更新。
+> **主机采集分支：**支持直接 USB 采集、格式选择、Apple/ODF-VFI (RIFE) 引擎切换、4K30→60 RIFE 预设、30→60/60→120 配置及实测诊断。打开 **文件 → Capture card**。详见[采集卡指南](docs/capture-card.md)。已禁用上游自动更新。
 
 <p align="center"><img src="Design/AppIcon/AppIcon.appiconset/AppIcon-256.png" alt="OpenDuckFrame" width="128" height="128"></p>
 <h1 align="center">OpenDuckFrame · 开源小鸭</h1>

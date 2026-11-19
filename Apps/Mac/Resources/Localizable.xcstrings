@@ -40820,103 +40820,103 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "PlayStation → USB capture → Apple frame generation → display"
+            "value": "PlayStation → USB capture → Apple / RIFE frame generation → display"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "PlayStation → USB-захват → генерация кадров Apple → монитор"
+            "value": "PlayStation → USB-захват → генерация кадров Apple / RIFE → монитор"
           }
         },
         "de": {
           "stringUnit": {
             "state": "translated",
-            "value": "PlayStation → USB-Aufnahme → Apple-Zwischenbilder → Bildschirm"
+            "value": "PlayStation → USB-Aufnahme → Apple / RIFE-Zwischenbilder → Bildschirm"
           }
         },
         "es": {
           "stringUnit": {
             "state": "translated",
-            "value": "PlayStation → captura USB → generación de fotogramas Apple → pantalla"
+            "value": "PlayStation → captura USB → generación de fotogramas Apple / RIFE → pantalla"
           }
         },
         "fr": {
           "stringUnit": {
             "state": "translated",
-            "value": "PlayStation → capture USB → génération d’images Apple → écran"
+            "value": "PlayStation → capture USB → génération d’images Apple / RIFE → écran"
           }
         },
         "id": {
           "stringUnit": {
             "state": "translated",
-            "value": "PlayStation → tangkapan USB → pembuatan bingkai Apple → layar"
+            "value": "PlayStation → tangkapan USB → pembuatan bingkai Apple / RIFE → layar"
           }
         },
         "it": {
           "stringUnit": {
             "state": "translated",
-            "value": "PlayStation → acquisizione USB → generazione fotogrammi Apple → schermo"
+            "value": "PlayStation → acquisizione USB → generazione fotogrammi Apple / RIFE → schermo"
           }
         },
         "ja": {
           "stringUnit": {
             "state": "translated",
-            "value": "PlayStation → USBキャプチャ → Appleフレーム生成 → 画面"
+            "value": "PlayStation → USBキャプチャ → Apple / RIFEフレーム生成 → 画面"
           }
         },
         "ko": {
           "stringUnit": {
             "state": "translated",
-            "value": "PlayStation → USB 캡처 → Apple 프레임 생성 → 화면"
+            "value": "PlayStation → USB 캡처 → Apple / RIFE 프레임 생성 → 화면"
           }
         },
         "nl": {
           "stringUnit": {
             "state": "translated",
-            "value": "PlayStation → USB-opname → Apple-framegeneratie → scherm"
+            "value": "PlayStation → USB-opname → Apple / RIFE-framegeneratie → scherm"
           }
         },
         "pl": {
           "stringUnit": {
             "state": "translated",
-            "value": "PlayStation → przechwytywanie USB → generowanie klatek Apple → ekran"
+            "value": "PlayStation → przechwytywanie USB → generowanie klatek Apple / RIFE → ekran"
           }
         },
         "pt": {
           "stringUnit": {
             "state": "translated",
-            "value": "PlayStation → captura USB → geração de quadros Apple → tela"
+            "value": "PlayStation → captura USB → geração de quadros Apple / RIFE → tela"
           }
         },
         "zh-Hans": {
           "stringUnit": {
             "state": "translated",
-            "value": "PlayStation → USB 采集 → Apple 帧生成 → 显示器"
+            "value": "PlayStation → USB 采集 → Apple / RIFE 帧生成 → 显示器"
           }
         },
         "zh-Hant": {
           "stringUnit": {
             "state": "translated",
-            "value": "PlayStation → USB 擷取 → Apple 影格生成 → 顯示器"
+            "value": "PlayStation → USB 擷取 → Apple / RIFE 影格生成 → 顯示器"
           }
         },
         "vi": {
           "stringUnit": {
             "state": "translated",
-            "value": "PlayStation → thu USB → tạo khung hình Apple → màn hình"
+            "value": "PlayStation → thu USB → tạo khung hình Apple / RIFE → màn hình"
           }
         },
         "tr": {
           "stringUnit": {
             "state": "translated",
-            "value": "PlayStation → USB yakalama → Apple kare üretimi → ekran"
+            "value": "PlayStation → USB yakalama → Apple / RIFE kare üretimi → ekran"
           }
         },
         "th": {
           "stringUnit": {
             "state": "translated",
-            "value": "PlayStation → จับภาพ USB → สร้างเฟรม Apple → จอภาพ"
+            "value": "PlayStation → จับภาพ USB → สร้างเฟรม Apple / RIFE → จอภาพ"
           }
         }
       }
@@ -44589,6 +44589,220 @@
           "stringUnit": {
             "state": "translated",
             "value": "ความละเอียด USB ไม่ยืนยันสัญญาณ HDMI หรือความละเอียดเรนเดอร์ในเกม ตรวจสอบข้อมูลเอาต์พุตวิดีโอ PS5 แนะนำแบบไม่บีบอัดใกล้ความละเอียดจอที่ 60 Hz ส่วน 4K เลือกเอง ตรวจสอบโหมด USB 10 Gbit/s และสาย Elgato 30→60 เป็นข้อสมมติ ไม่ใช่การตรวจจับอัตโนมัติ การเปลี่ยนภาพเป็นเพียงค่าประมาณ AI อาจประมวลผลที่ความละเอียดต่ำกว่า P95 วัดจากรับ USB ถึงแสดงผล ไม่รวมความหน่วงของคอนโทรลเลอร์ เสียง HDMI อาจนำหน้าวิดีโอ"
+          }
+        }
+      }
+    },
+    "capture.engine": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Frame generator"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Генератор кадров"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Frame-Generator"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Generador de fotogramas"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Générateur d’images"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Pembuat bingkai"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Generatore fotogrammi"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "フレーム生成器"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "프레임 생성기"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Framegenerator"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Generator klatek"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Gerador de quadros"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "帧生成器"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "影格產生器"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Bộ tạo khung hình"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Kare üretici"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ตัวสร้างเฟรม"
+          }
+        }
+      }
+    },
+    "capture.experimental": {
+      "extractionState": "manual",
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Experimental"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Экспериментальный"
+          }
+        },
+        "de": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Experimentell"
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Experimental"
+          }
+        },
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Expérimental"
+          }
+        },
+        "id": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eksperimental"
+          }
+        },
+        "it": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Sperimentale"
+          }
+        },
+        "ja": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "実験的"
+          }
+        },
+        "ko": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "실험적"
+          }
+        },
+        "nl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Experimenteel"
+          }
+        },
+        "pl": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Eksperymentalny"
+          }
+        },
+        "pt": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Experimental"
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "实验性"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "實驗性"
+          }
+        },
+        "vi": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Thử nghiệm"
+          }
+        },
+        "tr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Deneysel"
+          }
+        },
+        "th": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ทดลอง"
           }
         }
       }

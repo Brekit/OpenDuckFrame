@@ -1550,6 +1550,7 @@ static NSDictionary *SPAirFusedRenderExport(const SPAirFusedRenderPtr &record) {
 - (BOOL)copyAirSlotCallbacks:(std::vector<SPAirSlotCallbackEvent> *)events total:(uint64_t *)total
     mainCallerSynchronouslyOnProcessorQueue:(BOOL)safe unsupported:(uint64_t *)unsupported;
 - (void)setLowLatencyPresentationEnabled:(BOOL)enabled;
+- (void)setCaptureCardPresentationEnabled:(BOOL)enabled;
 - (BOOL)boundedPresentationEnabled;
 @end
 
@@ -1609,6 +1610,7 @@ static NSDictionary *SPAirFusedRenderExport(const SPAirFusedRenderPtr &record) {
     BOOL _airPresentationTimingDiagnostic;
     SPPreparedTextureMapper *_preparedTextures;
     BOOL _airPreparedTextureDiagnostic;
+    std::atomic<bool> _captureCardPresentationEnabled;
     spAirMeasurement::TracePtr _measurementTrace;
     std::atomic<bool> _airPerformanceEnabled;
     std::atomic<bool> _lowLatencyPresentationEnabled;
@@ -1642,6 +1644,7 @@ static NSDictionary *SPAirFusedRenderExport(const SPAirFusedRenderPtr &record) {
         _measurementTrace = std::make_shared<spAirMeasurement::Trace>(spAirMeasurement::viewCapacity);
     _airPerformanceEnabled.store(false);
     _lowLatencyPresentationEnabled.store(false);
+    _captureCardPresentationEnabled.store(false);
     const BOOL legacyAirRecipe = SPAirBetaEnabled() ||
         (strcmp(getenv("ODF_AIR_FUSED_RIFE_PRESENT_DIAGNOSTIC") ?: "", "1") == 0 &&
          strcmp(getenv("ODF_AIR_RIFE_PRESCALE_DIAGNOSTIC") ?: "", "1") == 0 &&
@@ -1777,7 +1780,7 @@ static NSDictionary *SPAirFusedRenderExport(const SPAirFusedRenderPtr &record) {
 
 - (BOOL)airPerformanceEnabled { return _airPerformanceEnabled.load(std::memory_order_acquire); }
 - (BOOL)boundedPresentationEnabled {
-    return [self airPerformanceEnabled] || _lowLatencyPresentationEnabled.load();
+    return [self airPerformanceEnabled] || _captureCardPresentationEnabled.load(std::memory_order_acquire) || _lowLatencyPresentationEnabled.load();
 }
 - (void)setLowLatencyPresentationEnabled:(BOOL)enabled {
     if (_lowLatencyPresentationEnabled.exchange(enabled) != enabled) {
@@ -1785,7 +1788,17 @@ static NSDictionary *SPAirFusedRenderExport(const SPAirFusedRenderPtr &record) {
         [self resetAirDisplayPolicyLocked];
     }
 }
-- (int64_t)selectionGuardNs { return _selectionGuardNs.load(); }
+- (void)setCaptureCardPresentationEnabled:(BOOL)enabled {
+    // Map full-size capture textures before the display callback's short submit
+    // window. The mapper owns at most four leases, including GPU-inflight work.
+    // Keep the ordinary window/file presentation path unchanged.
+    if (enabled && !_preparedTextures) _preparedTextures = [[SPPreparedTextureMapper alloc] initWithDevice:_device];
+    _captureCardPresentationEnabled.store(enabled, std::memory_order_release);
+}
+- (int64_t)selectionGuardNs {
+    return _captureCardPresentationEnabled.load(std::memory_order_acquire)
+        ? MAX((int64_t)4000000, _selectionGuardNs.load()) : _selectionGuardNs.load();
+}
 
 - (void)setPresentedVideoReadbackEnabled:(BOOL)enabled {
 #if ODF_AIR_FUSED_RIFE_PRESENT_DIAGNOSTIC
@@ -2375,7 +2388,7 @@ static NSDictionary *SPAirFusedRenderExport(const SPAirFusedRenderPtr &record) {
         SPAirFrameEvent event = SPAirFrameRecord(frame, SPAirFrameKind::admitted, SPAirFrameReason::none, SPAirFrameStage::admission);
         frame.causalEnqueueHostTicks = event.hostTicks; event.enqueueHostTicks = event.hostTicks; _airCadenceFrames->append(event);
     }
-    if ((frame.airPerformanceEnabled || _airPreparedTextureDiagnostic) && _preparedTextures) [_preparedTextures prepareFrame:frame];
+    if ((frame.airPerformanceEnabled || _captureCardPresentationEnabled.load(std::memory_order_acquire) || _airPreparedTextureDiagnostic) && _preparedTextures) [_preparedTextures prepareFrame:frame];
     return YES; // admitted only; success is still counted exclusively by addPresentedHandler
 }
 
@@ -2567,7 +2580,7 @@ static NSDictionary *SPAirFusedRenderExport(const SPAirFusedRenderPtr &record) {
 }
 
 - (NSDictionary *)preparedTextureCountersSnapshot {
-    return ([self airPerformanceEnabled] || _airPreparedTextureDiagnostic) && _preparedTextures ? [_preparedTextures snapshot] : @{ @"enabled": @NO, @"capacity": @4 };
+    return ([self airPerformanceEnabled] || _captureCardPresentationEnabled.load(std::memory_order_acquire) || _airPreparedTextureDiagnostic) && _preparedTextures ? [_preparedTextures snapshot] : @{ @"enabled": @NO, @"capacity": @4 };
 }
 
 - (NSDictionary *)displaySlotDiagnostics {
@@ -2616,7 +2629,7 @@ static NSDictionary *SPAirFusedRenderExport(const SPAirFusedRenderPtr &record) {
         @"timerTraceNote": @"bounded slot observations; handler entry includes OS wake and render-queue scheduling, lock acquisition separately includes mutex wait" };
 #if defined(ODF_AIR_PRESENTATION_GUARD_DIAGNOSTIC) && ODF_AIR_PRESENTATION_GUARD_DIAGNOSTIC == 1
     NSMutableDictionary *diagnostic = [result mutableCopy];
-    diagnostic[@"preparedTexture"] = ([self airPerformanceEnabled] || _airPreparedTextureDiagnostic) && _preparedTextures ? [_preparedTextures snapshot] : @{ @"enabled": @NO, @"capacity": @4 };
+    diagnostic[@"preparedTexture"] = ([self airPerformanceEnabled] || _captureCardPresentationEnabled.load(std::memory_order_acquire) || _airPreparedTextureDiagnostic) && _preparedTextures ? [_preparedTextures snapshot] : @{ @"enabled": @NO, @"capacity": @4 };
     result = diagnostic;
 #endif
     return result;
@@ -2926,7 +2939,7 @@ static NSDictionary *SPAirFusedRenderExport(const SPAirFusedRenderPtr &record) {
     auto note = std::make_shared<SPDrawNote>();
     const BOOL timingDiagnostic = _airPresentationTimingDiagnostic;
     int preparedReason = SPPreparedNone;
-    const BOOL preparedTextureEnabled = frame.airPerformanceEnabled || _airPreparedTextureDiagnostic;
+    const BOOL preparedTextureEnabled = frame.airPerformanceEnabled || _captureCardPresentationEnabled.load(std::memory_order_acquire) || _airPreparedTextureDiagnostic;
     SPPreparedTextureLease *preparedLease = preparedTextureEnabled && _preparedTextures ? [_preparedTextures claimFrame:frame recordSelection:YES reason:&preparedReason] : nil;
     if (timingDiagnostic) {
         note->preparedTextureEnabled.store(preparedTextureEnabled && _preparedTextures != nil); note->preparedTextureHit.store(preparedLease != nil);
@@ -7146,6 +7159,13 @@ static NSDictionary *SPAirDelayAlignmentExport(const std::vector<SPAirDelayAlign
         _width <= 3840 && _height <= 2160;
 }
 - (uint64_t)r8QueueByteBudget {
+    if (_request.captureSourceKind == SPLiveCaptureSourceKindCaptureCard) {
+        // 4K BGRA needs about 32 MiB per retained output. The ordinary 160 MiB
+        // cap only allows 50 ms at X2, below inference plus display preparation.
+        // Scale this bounded capture-only allowance with available system RAM.
+        const uint64_t scaled = [NSProcessInfo processInfo].physicalMemory / 64;
+        return MIN(256ull << 20, MAX(SPQueueByteBudget, scaled));
+    }
     return [self r8CanExperiment] ? ((uint64_t)SPR8Option(@"--odf-r8-budget-mib", 160, @[@160,@320,@480]) << 20) : SPQueueByteBudget;
 }
 - (int)r8AdmissionLimit {
@@ -7160,7 +7180,7 @@ static NSDictionary *SPAirDelayAlignmentExport(const std::vector<SPAirDelayAlign
     NSUInteger cap = (NSUInteger)([self r8QueueByteBudget] / bytes);
     // The existing insert-then-evict path transiently has one extra slot.
     // Diagnostic budgets reserve it while preserving the regular path.
-    if ([self r8CanExperiment] && cap > 3) cap -= 1;
+    if (([self r8CanExperiment] || _request.captureSourceKind == SPLiveCaptureSourceKindCaptureCard) && cap > 3) cap -= 1;
     if (cap < 3) cap = 3;
     if (cap > 32) cap = 32;
     return cap;
@@ -7380,7 +7400,7 @@ static NSDictionary *SPAirDelayAlignmentExport(const std::vector<SPAirDelayAlign
     }
     if (process < 0.008) process = 0.008;
     double renderMargin = 0.016;
-    if (_airDelayAlignmentRequested && _request.rateKind == SPLiveRateMultiplier && _request.multiplier == 2 &&
+    if ((_airDelayAlignmentRequested || _request.captureSourceKind == SPLiveCaptureSourceKindCaptureCard) && _request.rateKind == SPLiveRateMultiplier && _request.multiplier == 2 &&
         _effectiveMultiplier == 2 && ([_request.engineID isEqualToString:@"rife.metal"]
 #if defined(ODF_AIR_PRESENTATION_GUARD_DIAGNOSTIC) && ODF_AIR_PRESENTATION_GUARD_DIAGNOSTIC == 1
         || [_request.engineID isEqualToString:@"apple.frc"]
@@ -7690,6 +7710,9 @@ static NSDictionary *SPAirDelayAlignmentExport(const std::vector<SPAirDelayAlign
          frameID:(uint64_t)frameID
 presentationHost:(int64_t)presentationHost
           redraw:(BOOL)redraw {
+    const BOOL captureCardPresentation = _request.captureSourceKind == SPLiveCaptureSourceKindCaptureCard;
+    [self.preview setCaptureCardPresentationEnabled:captureCardPresentation];
+    [self.outputPreview setCaptureCardPresentationEnabled:captureCardPresentation];
     const BOOL lowLatencyPresentation = _lowLatency && _resolved.interpolationActive && !_nativeBudgetActive && _request.viewMode == SPLiveViewEnhanced;
     [self.preview setLowLatencyPresentationEnabled:lowLatencyPresentation];
     [self.outputPreview setLowLatencyPresentationEnabled:lowLatencyPresentation];
@@ -7760,7 +7783,7 @@ presentationHost:(int64_t)presentationHost
     SPLivePreviewView *timedView = self.outputPreview.windowVisibleSnapshot ? self.outputPreview : self.preview;
     int64_t observedLeadNs = MAX((int64_t)16000000, [timedView presentationPreparationLeadNs]);
     int64_t prepareLead = [self requestUsesLatestPresentation:_request] ? 0 :
-        SPRationalToHost(sp::spMake(observedLeadNs + (_airPerformanceEnabled ? 3000000 : 0), 1000000000));
+        SPRationalToHost(sp::spMake(observedLeadNs + ((_airPerformanceEnabled || _request.captureSourceKind == SPLiveCaptureSourceKindCaptureCard) ? 3000000 : 0), 1000000000));
     while (!_slots.empty()) {
         int64_t earliest = 0;
         if ([self waitForPendingBefore:_slots.front().pts now:now earliest:&earliest]) {

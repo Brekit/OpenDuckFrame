@@ -1,4 +1,4 @@
-> **Console capture fork:** direct USB capture, selectable formats, 30→60/60→120 profiles and measured diagnostics. Open **File → Capture card**. See [capture-card guide](docs/capture-card.md). Upstream automatic updates are disabled.
+> **Console capture fork:** direct USB capture, selectable formats and generators, 30→60/60→120 profiles, a **4K30 → 60 · RIFE** preset and measured diagnostics. Open **File → Capture card**. See [capture-card guide](docs/capture-card.md). Upstream automatic updates are disabled.
 
 <p align="center"><img src="Design/AppIcon/AppIcon.appiconset/AppIcon-256.png" alt="OpenDuckFrame" width="128" height="128"></p>
 <h1 align="center">OpenDuckFrame</h1>
